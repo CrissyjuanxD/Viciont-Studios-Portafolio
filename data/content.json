@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 8,
-    "updatedAt": "2026-09-25T08:21:04.970Z",
+    "version": 9,
+    "updatedAt": "2026-09-25T10:27:24.728Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -68,8 +68,8 @@
       {
         "id": "rompope05",
         "name": "Rompope",
-        "role": "Gameplay Designer",
-        "description": "Es el principal gameplay designer del estudio. Aprueba si una idea puede ser buena o no, si el gameplay es limpio y divertido, etc.",
+        "role": "Gameplay Designer · Commands",
+        "description": "Es el principal gameplay designer del estudio. Aprueba si una idea puede ser buena o no, si el gameplay es limpio y divertido.\nTambién se maneja muy bien con Commands blocks",
         "avatar": "",
         "hidden": false,
         "socials": []
@@ -87,7 +87,7 @@
         "id": "torathdeargento",
         "name": "TorathDaArgento",
         "role": "Guionista · Lore",
-        "description": "Este es el guionista del estudio: en cualquier server que tenga lore, él estará presente para dar una narrativa correcta, disfrutable y entendible.",
+        "description": "Este es el guionista del estudio: en cualquier server que tenga lore, él estará presente para dar una narrativa correcta, disfrutable y entendible.\nTambién aporta ideas sobre gameplay y soundtracks.",
         "avatar": "",
         "hidden": false,
         "socials": []
