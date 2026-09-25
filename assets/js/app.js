@@ -154,7 +154,7 @@ function render(raw, { live = false } = {}) {
   $$('[data-label]').forEach((el) => { el.textContent = L[el.dataset.label] ?? el.textContent; });
 
   // redes del estudio
-  for (const type of ['youtube', 'x']) {
+  for (const type of ['youtube', 'x', 'discord']) {
     const url = safeUrl(c.socials[type]);
     $$(`[data-social="${type}"]`).forEach((a) => {
       a.href = url || '#';
@@ -486,7 +486,7 @@ function bindChrome() {
     const emptySocial = t.closest('[data-social].is-empty');
     if (emptySocial) {
       e.preventDefault();
-      const name = emptySocial.dataset.social === 'youtube' ? 'El canal de YouTube' : 'La cuenta de X';
+      const name = { youtube: 'El canal de YouTube', x: 'La cuenta de X', discord: 'El servidor de Discord' }[emptySocial.dataset.social] || 'Esta red';
       toast(`${name} del estudio estará disponible muy pronto.`);
       return;
     }

@@ -422,10 +422,11 @@ function tabGeneral() {
   </section>
   <section class="card-panel">
     <h2 class="card-panel__title">${icon('globe')} Redes del estudio</h2>
-    <p class="field__hint">Son los iconos de YouTube y X de la barra de navegación y del footer. Si están vacías, al pulsarlas sale “disponible muy pronto”.</p>
+    <p class="field__hint">Son los iconos de YouTube, X y Discord de la barra de navegación y del footer. Si están vacías, al pulsarlas sale “disponible muy pronto”.</p>
     <div class="grid-2">
       ${fText('socials.youtube', 'YouTube', { type: 'url', placeholder: 'https://www.youtube.com/@ViciontStudios', maxlength: 300 })}
       ${fText('socials.x', 'X (Twitter)', { type: 'url', placeholder: 'https://x.com/ViciontStudios', maxlength: 300 })}
+      ${fText('socials.discord', 'Discord', { type: 'url', placeholder: 'https://discord.gg/tu-invitacion', maxlength: 300, hint: 'Usa un enlace de invitación que no caduque.' })}
     </div>
   </section>`;
 }
@@ -1014,7 +1015,7 @@ function loadImage(file) {
 function validate(c) {
   const problems = [];
   if (!c.site.name.trim()) problems.push('El nombre del estudio está vacío (General).');
-  for (const [k, label] of [['youtube', 'YouTube'], ['x', 'X']]) {
+  for (const [k, label] of [['youtube', 'YouTube'], ['x', 'X'], ['discord', 'Discord']]) {
     if (c.socials[k] && !safeUrl(c.socials[k])) problems.push(`El enlace de ${label} del estudio no es válido (General).`);
   }
   if (c.contact.email && !EMAIL_RE.test(c.contact.email)) problems.push('El correo de contacto no es válido (Contacto).');

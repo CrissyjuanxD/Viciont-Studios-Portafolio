@@ -273,7 +273,11 @@ export function normalizeContent(raw) {
       typing: lines(site.typing),
       ticker: lines(site.ticker),
     },
-    socials: { youtube: str(c.socials?.youtube).trim(), x: str(c.socials?.x).trim() },
+    socials: {
+      youtube: str(c.socials?.youtube).trim(),
+      x: str(c.socials?.x).trim(),
+      discord: str(c.socials?.discord).trim(),
+    },
     about: { title: str(c.about?.title, 'Sobre nosotros'), text: str(c.about?.text) },
     team: {
       title: str(team.title, 'Miembros del Team'),
