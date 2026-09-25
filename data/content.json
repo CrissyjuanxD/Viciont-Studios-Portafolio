@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 9,
-    "updatedAt": "2026-09-25T10:27:24.728Z",
+    "version": 10,
+    "updatedAt": "2026-09-25T20:18:47.563Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -70,9 +70,14 @@
         "name": "Rompope",
         "role": "Gameplay Designer · Commands",
         "description": "Es el principal gameplay designer del estudio. Aprueba si una idea puede ser buena o no, si el gameplay es limpio y divertido.\nTambién se maneja muy bien con Commands blocks",
-        "avatar": "",
+        "avatar": "assets/uploads/miembro-rompope-muhelll6b4l.webp",
         "hidden": false,
-        "socials": []
+        "socials": [
+          {
+            "type": "x",
+            "url": "https://x.com/Rompope__"
+          }
+        ]
       },
       {
         "id": "pepe002",
@@ -81,7 +86,16 @@
         "description": "Este es el principal builder del estudio; sus construcciones deslumbran en cada server en el que participa. Además, también aporta ideas.",
         "avatar": "",
         "hidden": false,
-        "socials": []
+        "socials": [
+          {
+            "type": "tiktok",
+            "url": "https://www.tiktok.com/@1pepepoio1"
+          },
+          {
+            "type": "twitch",
+            "url": "https://www.twitch.tv/1pepepoio1"
+          }
+        ]
       },
       {
         "id": "torathdeargento",
@@ -90,7 +104,20 @@
         "description": "Este es el guionista del estudio: en cualquier server que tenga lore, él estará presente para dar una narrativa correcta, disfrutable y entendible.\nTambién aporta ideas sobre gameplay y soundtracks.",
         "avatar": "",
         "hidden": false,
-        "socials": []
+        "socials": [
+          {
+            "type": "twitch",
+            "url": "https://www.twitch.tv/torathdargento"
+          },
+          {
+            "type": "x",
+            "url": "https://x.com/TorathDArgento"
+          },
+          {
+            "type": "youtube",
+            "url": "https://www.youtube.com/@Torath."
+          }
+        ]
       },
       {
         "id": "alejo17l",
@@ -137,14 +164,14 @@
           ],
           "description": "Un hardcore en proceso para la 1.21.11 que se basa en la serie Permadeath de ElRichMC y en el Dedsafío de ElDed.\n\nCuenta con más de **10 bosses**, más de **100 cambios de dificultad**, dimensiones nuevas, mecánicas nuevas, misiones diarias y mucho más. Es un proyecto que aún no sale a la luz, pero que será un antes y un después para Viciont Studios.",
           "image": "",
-          "link": "",
-          "linkLabel": "",
+          "link": "https://discord.gg/qZPUhPRtX",
+          "linkLabel": "Descubre avances del servidor aquí.",
           "hidden": false
         },
         {
           "id": "ismanusmp",
           "title": "IsManuSMP",
-          "badge": "",
+          "badge": "Activo",
           "tags": [
             "SMP",
             "PvP",
@@ -153,8 +180,8 @@
           ],
           "description": "Un SMP del streamer IsManuPlay que ya ha tenido **más de 4 entregas** para sus seguidores. Abarca PvP, misiones, un sistema de economía, casino y mucho más.",
           "image": "",
-          "link": "",
-          "linkLabel": "",
+          "link": "https://discord.com/invite/8VpfVTF",
+          "linkLabel": "Descubre como jugar aquí.",
           "hidden": false
         },
         {
@@ -197,7 +224,7 @@
           ],
           "description": "Un evento para el streamer IsManuPlay donde se jugó al famoso hide and seek: los jugadores debían esconderse con un tamaño reducido en un inmenso mapa con ítems custom y monedas, mientras los cazadores los buscaban. Ganaba quien tuviera más monedas.",
           "image": "",
-          "link": "https://www.youtube.com/watch?v=pmDcWs4YvcQ",
+          "link": "https://www.youtube.com/watch?v=rg-sytoOY8M&t=3820s",
           "linkLabel": "Ver Evento",
           "hidden": false
         },
@@ -212,14 +239,14 @@
           ],
           "description": "Un evento para el streamer IsManuPlay donde se jugaron unos Hunger Games de **más de 60 personas**. Debían lootear recursos por el mapa sin que el borde los matara y luchar entre todos; el último jugador vivo ganaba.",
           "image": "",
-          "link": "https://www.youtube.com/watch?v=rg-sytoOY8M&t=3820s",
+          "link": "https://www.youtube.com/watch?v=pmDcWs4YvcQ",
           "linkLabel": "Ver Evento",
           "hidden": false
         },
         {
           "id": "viciont-hardcore-2",
           "title": "Viciont Hardcore 2",
-          "badge": "",
+          "badge": "Finalizado",
           "tags": [
             "Hardcore",
             "40 jugadores",
@@ -227,14 +254,14 @@
           ],
           "description": "Un servidor hardcore que recreó la experiencia de Permadeath de ElRichMC, donde **40 jugadores** debían sobrevivir **28 días** para derrotar al Viciont Demon.\n\n8 jugadores sobrevivieron hasta el último día y al boss final.",
           "image": "",
-          "link": "",
-          "linkLabel": "",
+          "link": "https://discord.gg/qZPUhPRtX",
+          "linkLabel": "Descubre mas del servidor aquí.",
           "hidden": false
         },
         {
           "id": "viciont-smp-2",
           "title": "Viciont SMP 2",
-          "badge": "",
+          "badge": "Finalizado",
           "tags": [
             "SMP",
             "Resource pack",
@@ -242,8 +269,8 @@
           ],
           "description": "El primer SMP del estudio bien hecho. Se caracterizó por tener pequeños cambios de dificultad, mini eventos, un sistema de pranks y, sobre todo, un bonito **resource pack** que hacía que el juego se viera más vivo y con muchos detalles.",
           "image": "",
-          "link": "",
-          "linkLabel": "",
+          "link": "https://discord.gg/qZPUhPRtX",
+          "linkLabel": "Descubre mas del servidor aquí.",
           "hidden": false
         }
       ]
