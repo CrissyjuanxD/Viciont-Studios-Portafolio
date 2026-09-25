@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex">
+  <title>Señal perdida · Viciont Studios</title>
+  <link rel="icon" type="image/png" href="/Viciont-Studios-Portafolio/assets/img/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:wght@500;700&family=Share+Tech+Mono&display=swap">
+  <style>
+    :root { color-scheme: dark; }
+    * { box-sizing: border-box; margin: 0; }
+    body {
+      min-height: 100vh; min-height: 100dvh;
+      display: grid; place-items: center; padding: 24px 16px; overflow: hidden;
+      background: radial-gradient(60vmax 60vmax at 30% 20%, rgba(124, 58, 237, 0.35), transparent 60%),
+                  radial-gradient(50vmax 50vmax at 80% 90%, rgba(236, 72, 153, 0.3), transparent 60%), #06020c;
+      color: #f7f2ff; font-family: 'Chakra Petch', system-ui, sans-serif; text-align: center;
+    }
+    body::after { content: ''; position: fixed; inset: 0; pointer-events: none; background: repeating-linear-gradient(to bottom, rgba(255,255,255,0.03) 0 1px, transparent 1px 3px); }
+    main { position: relative; z-index: 1; display: grid; justify-items: center; gap: 14px; max-width: 520px; }
+    img { width: 96px; height: auto; filter: drop-shadow(0 0 20px rgba(168, 85, 247, 0.7)); }
+    .code { position: relative; font: 400 clamp(7rem, 30vw, 12rem)/0.8 'Bebas Neue', Impact, sans-serif; letter-spacing: 0.02em; text-shadow: -4px 0 rgba(255, 43, 214, 0.8), 4px 0 rgba(122, 92, 255, 0.8), 0 0 50px rgba(168, 85, 247, 0.7); animation: glitch 2.4s steps(1) infinite; }
+    @keyframes glitch { 0%, 88%, 100% { transform: none; } 90% { transform: translateX(-6px) skewX(12deg); } 94% { transform: translateX(5px) skewX(-8deg); } }
+    .mono { font: 400 0.85rem/1.4 'Share Tech Mono', monospace; letter-spacing: 0.18em; text-transform: uppercase; color: #f0abfc; }
+    p { color: #cfc2e8; }
+    a { display: inline-flex; align-items: center; gap: 8px; margin-top: 8px; padding: 12px 20px; border-radius: 12px; background: linear-gradient(100deg, #a855f7, #ec4899 60%, #ff2bd6); color: #fff; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; box-shadow: 0 10px 30px -10px rgba(236, 72, 153, 0.8); }
+    @media (prefers-reduced-motion: reduce) { .code { animation: none; } }
+  </style>
+</head>
+<body>
+  <main>
+    <img src="/Viciont-Studios-Portafolio/assets/img/emblem-160.webp" alt="" width="160" height="140">
+    <p class="mono">&gt; error: señal perdida</p>
+    <h1 class="code">404</h1>
+    <p>Esta página no existe o se movió a otra dimensión.</p>
+    <a href="/Viciont-Studios-Portafolio/">Volver a Viciont Studios</a>
+  </main>
+</body>
+</html>

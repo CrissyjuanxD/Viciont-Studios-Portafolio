@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="referrer" content="no-referrer">
+  <meta name="theme-color" content="#07020d">
+  <meta name="color-scheme" content="dark">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://api.github.com https://crissyjuanxd.github.io; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src 'none'">
+  <title>Panel · Viciont Studios</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon-32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:wght@400;500;600;700&family=Share+Tech+Mono&display=swap">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/admin.css">
+  <script type="module" src="../assets/js/admin.js"></script>
+</head>
+<body class="admin">
+  <div class="admin-bg" aria-hidden="true"></div>
+
+  <!-- Pantalla de carga -->
+  <div class="splash" id="splash">
+    <img src="../assets/img/emblem-160.webp" alt="" width="160" height="140">
+    <p class="mono">&gt; verificando acceso<span class="caret"></span></p>
+  </div>
+
+  <!-- Inicio de sesión -->
+  <main class="login" id="login" hidden>
+    <div class="login__card">
+      <img class="login__emblem" src="../assets/img/emblem-160.webp" alt="" width="160" height="140">
+      <p class="kicker"><i data-icon="lock"></i> acceso restringido</p>
+      <h1 class="login__title">Panel de administración</h1>
+      <p class="login__text">
+        Entra con un <strong>token de acceso de GitHub</strong>. Solo funcionan los tokens de cuentas con permiso de escritura en
+        <code id="repo-name">CrissyjuanxD/Viciont-Studios-Portafolio</code>.
+      </p>
+
+      <form class="login__form" id="login-form" autocomplete="off" novalidate>
+        <label class="field">
+          <span class="field__label">Token de acceso</span>
+          <span class="input-wrap">
+            <input class="input" id="token" name="token" type="password" placeholder="github_pat_…" required spellcheck="false" autocapitalize="off" autocomplete="off">
+            <button class="input-wrap__btn" type="button" id="toggle-token" aria-label="Mostrar u ocultar el token"><i data-icon="eye"></i></button>
+          </span>
+        </label>
+        <label class="check">
+          <input type="checkbox" id="remember">
+          <span>Recordar en este dispositivo <small>(solo en tu PC o móvil personal)</small></span>
+        </label>
+        <p class="form-error" id="login-error" role="alert" hidden></p>
+        <button class="btn btn--primary btn--block" type="submit" id="login-btn"><i data-icon="key"></i> Entrar al panel</button>
+      </form>
+
+      <details class="help">
+        <summary><i data-icon="info"></i> ¿Cómo consigo mi token? (1 minuto)</summary>
+        <ol>
+          <li>Abre <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">GitHub → Fine-grained tokens → Generate new token</a> con tu cuenta.</li>
+          <li><b>Token name:</b> <code>Panel Viciont</code> · <b>Expiration:</b> la que prefieras (por ejemplo 1 año).</li>
+          <li><b>Repository access:</b> <em>Only select repositories</em> → <code>Viciont-Studios-Portafolio</code>.</li>
+          <li><b>Permissions → Repository permissions → Contents:</b> <em>Read and write</em>. No actives nada más.</li>
+          <li>Pulsa <b>Generate token</b>, copia el código (empieza por <code>github_pat_</code>) y pégalo aquí.</li>
+        </ol>
+        <p class="help__note"><i data-icon="shield"></i> Guárdalo como una contraseña. Si lo pierdes o crees que alguien lo vio, bórralo en GitHub y crea otro.</p>
+      </details>
+
+      <a class="login__back" href="../"><i data-icon="arrowLeft"></i> Volver a la web</a>
+    </div>
+  </main>
+
+  <!-- Panel -->
+  <div class="app" id="app" hidden>
+    <header class="topbar">
+      <a class="topbar__brand" href="../" target="_blank" rel="noopener" title="Abrir la web">
+        <img src="../assets/img/emblem-160.webp" alt="" width="160" height="140">
+        <span><b>Viciont</b> Panel</span>
+      </a>
+      <div class="status" id="status" aria-live="polite"></div>
+      <div class="topbar__actions">
+        <button class="btn btn--sm btn--ghost" type="button" id="btn-preview" title="Ver los cambios en vivo antes de publicar"><i data-icon="eye"></i><span>Vista previa</span></button>
+        <button class="btn btn--sm btn--primary" type="button" id="btn-publish"><i data-icon="upload"></i><span>Publicar</span></button>
+        <div class="user" id="user">
+          <img class="user__avatar" id="user-avatar" alt="" width="32" height="32">
+          <span class="user__name" id="user-name"></span>
+          <button class="btn btn--sm btn--icon btn--ghost" type="button" id="btn-logout" title="Cerrar sesión" aria-label="Cerrar sesión"><i data-icon="logout"></i></button>
+        </div>
+      </div>
+    </header>
+
+    <nav class="tabs" id="tabs" aria-label="Secciones del panel"></nav>
+
+    <main class="workspace" id="workspace" tabindex="-1"></main>
+  </div>
+
+  <!-- Ventana modal reutilizable -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" tabindex="-1">
+      <button class="modal__close" type="button" data-close aria-label="Cerrar"><i data-icon="close"></i></button>
+      <div class="modal__content"></div>
+    </div>
+  </div>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+
+  <noscript><p class="noscript">El panel necesita JavaScript activado.</p></noscript>
+</body>
+</html>
