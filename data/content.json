@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 11,
-    "updatedAt": "2026-09-25T22:53:21.772Z",
+    "version": 12,
+    "updatedAt": "2026-09-25T22:55:30.052Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -179,7 +179,7 @@
           "description": "Un hardcore en proceso para la 1.21.11 que se basa en la serie Permadeath de ElRichMC y en el Dedsafío de ElDed.\n\nCuenta con más de **10 bosses**, más de **100 cambios de dificultad**, dimensiones nuevas, mecánicas nuevas, misiones diarias y mucho más. Es un proyecto que aún no sale a la luz, pero que será un antes y un después para Viciont Studios.",
           "image": "",
           "link": "https://discord.gg/qZPUhPRtX",
-          "linkLabel": "Descubre avances del servidor aquí.",
+          "linkLabel": "Descubre avances del servidor.",
           "hidden": false
         },
         {
@@ -269,7 +269,7 @@
           "description": "Un servidor hardcore que recreó la experiencia de Permadeath de ElRichMC, donde **40 jugadores** debían sobrevivir **28 días** para derrotar al Viciont Demon.\n\n8 jugadores sobrevivieron hasta el último día y al boss final.",
           "image": "",
           "link": "https://discord.gg/qZPUhPRtX",
-          "linkLabel": "Descubre mas del servidor aquí.",
+          "linkLabel": "Descubre mas del servidor.",
           "hidden": false
         },
         {
@@ -284,7 +284,7 @@
           "description": "El primer SMP del estudio bien hecho. Se caracterizó por tener pequeños cambios de dificultad, mini eventos, un sistema de pranks y, sobre todo, un bonito **resource pack** que hacía que el juego se viera más vivo y con muchos detalles.",
           "image": "",
           "link": "https://discord.gg/qZPUhPRtX",
-          "linkLabel": "Descubre mas del servidor aquí.",
+          "linkLabel": "Descubre mas del servidor.",
           "hidden": false
         }
       ]
