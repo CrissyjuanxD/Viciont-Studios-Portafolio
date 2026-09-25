@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 12,
-    "updatedAt": "2026-09-25T22:55:30.052Z",
+    "version": 13,
+    "updatedAt": "2026-09-25T22:57:20.582Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -224,8 +224,8 @@
           ],
           "description": "Un SMP del streamer Crosszy, creado para sus espectadores en Java y Bedrock. Contó con eventos, misiones diarias, ítems especiales, sistema de economía y más.\n\nSu fuerte fueron las increíbles construcciones y los eventos que se hacían en el servidor, que hicieron más unida a la comunidad.",
           "image": "",
-          "link": "",
-          "linkLabel": "",
+          "link": "https://www.twitch.tv/crosszy",
+          "linkLabel": "Descubre mas.",
           "hidden": false
         },
         {
