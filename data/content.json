@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 4,
-    "updatedAt": "2026-09-25T07:42:50.520Z",
+    "version": 5,
+    "updatedAt": "2026-09-25T07:49:46.431Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -168,8 +168,8 @@
           ],
           "description": "Un OneBlock hardcore que se hizo con los streamers IsManuPlay y George10, donde había **15 fases y 15 cambios de dificultad** que tenían que sobrevivir, con estructuras, bosses e ítems custom.\n\nAdemás, es el primer evento público de Viciont Studios con assets y mods privados.",
           "image": "",
-          "link": "",
-          "linkLabel": "",
+          "link": "https://www.twitch.tv/videos/2861197331",
+          "linkLabel": "Ver Vod en Twitch (Temporal)",
           "hidden": false
         },
         {
