@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 10,
-    "updatedAt": "2026-09-25T20:18:47.563Z",
+    "version": 11,
+    "updatedAt": "2026-09-25T22:53:21.772Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -84,7 +84,7 @@
         "name": "Pepe002",
         "role": "Builder",
         "description": "Este es el principal builder del estudio; sus construcciones deslumbran en cada server en el que participa. Además, también aporta ideas.",
-        "avatar": "",
+        "avatar": "assets/uploads/miembro-pepe002-muhk4dm42no.webp",
         "hidden": false,
         "socials": [
           {
@@ -102,7 +102,7 @@
         "name": "TorathDaArgento",
         "role": "Guionista · Lore",
         "description": "Este es el guionista del estudio: en cualquier server que tenga lore, él estará presente para dar una narrativa correcta, disfrutable y entendible.\nTambién aporta ideas sobre gameplay y soundtracks.",
-        "avatar": "",
+        "avatar": "assets/uploads/miembro-torathdaargento-muhk4dm4ecw.webp",
         "hidden": false,
         "socials": [
           {
@@ -121,28 +121,42 @@
       },
       {
         "id": "alejo17l",
-        "name": "Alejo17l",
+        "name": "Alejo",
         "role": "Beta Tester",
         "description": "Forma parte de los principales beta testers de eventos, ya sean pequeños o grandes. En parte todos aportamos cuando hay que betatestear, pero siempre está ahí para detectar cosas y dar ideas.",
-        "avatar": "",
+        "avatar": "assets/uploads/miembro-alejo-muhk4dm49l8.webp",
         "hidden": false,
-        "socials": []
+        "socials": [
+          {
+            "type": "instagram",
+            "url": "https://www.instagram.com/alejo17l0/"
+          }
+        ]
       },
       {
         "id": "jony",
         "name": "Jony",
         "role": "Beta Tester",
         "description": "Forma parte de los principales beta testers de eventos, ya sean pequeños o grandes. En parte todos aportamos cuando hay que betatestear, pero siempre está ahí para detectar cosas y dar ideas.",
-        "avatar": "",
+        "avatar": "assets/uploads/miembro-jony-muhk4dm4qjb.webp",
         "hidden": false,
-        "socials": []
+        "socials": [
+          {
+            "type": "x",
+            "url": "https://x.com/azpasin"
+          },
+          {
+            "type": "twitch",
+            "url": "https://www.twitch.tv/azpasin"
+          }
+        ]
       },
       {
         "id": "zanahoria",
         "name": "ZanahoriaG257",
         "role": "Beta Tester",
         "description": "Forma parte de los principales beta testers de eventos, ya sean pequeños o grandes. En parte todos aportamos cuando hay que betatestear, pero siempre está ahí para detectar cosas y dar ideas.",
-        "avatar": "",
+        "avatar": "assets/uploads/miembro-zanahoriag257-muhk4dm4qpz.webp",
         "hidden": false,
         "socials": []
       }
