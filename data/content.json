@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 1,
-    "updatedAt": "2026-09-25T12:00:00.000Z",
+    "version": 2,
+    "updatedAt": "2026-09-25T07:32:01.244Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -28,8 +28,8 @@
     ]
   },
   "socials": {
-    "youtube": "",
-    "x": ""
+    "youtube": "https://www.youtube.com/@ViciontStudios",
+    "x": "https://x.com/pepoavilesg26"
   },
   "about": {
     "title": "Sobre nosotros",
@@ -45,8 +45,12 @@
         "role": "Fundador · Developer",
         "description": "Este es el fundador del estudio. Se encarga del desarrollo de software de los eventos, de las texturas 2D y 3D y del gameplay design de los eventos.",
         "avatar": "",
+        "hidden": false,
         "socials": [
-          { "type": "github", "url": "https://github.com/CrissyjuanxD" }
+          {
+            "type": "github",
+            "url": "https://github.com/CrissyjuanxD"
+          }
         ]
       },
       {
@@ -55,6 +59,7 @@
         "role": "Gameplay Designer",
         "description": "Es el principal gameplay designer del estudio. Aprueba si una idea puede ser buena o no, si el gameplay es limpio y divertido, etc.",
         "avatar": "",
+        "hidden": false,
         "socials": []
       },
       {
@@ -63,6 +68,7 @@
         "role": "Builder",
         "description": "Este es el principal builder del estudio; sus construcciones deslumbran en cada server en el que participa. Además, también aporta ideas.",
         "avatar": "",
+        "hidden": false,
         "socials": []
       },
       {
@@ -71,6 +77,7 @@
         "role": "Guionista · Lore",
         "description": "Este es el guionista del estudio: en cualquier server que tenga lore, él estará presente para dar una narrativa correcta, disfrutable y entendible.",
         "avatar": "",
+        "hidden": false,
         "socials": []
       },
       {
@@ -79,6 +86,7 @@
         "role": "Beta Tester",
         "description": "Forma parte de los principales beta testers de eventos, ya sean pequeños o grandes. En parte todos aportamos cuando hay que betatestear, pero siempre está ahí para detectar cosas y dar ideas.",
         "avatar": "",
+        "hidden": false,
         "socials": []
       },
       {
@@ -87,6 +95,7 @@
         "role": "Beta Tester",
         "description": "Forma parte de los principales beta testers de eventos, ya sean pequeños o grandes. En parte todos aportamos cuando hay que betatestear, pero siempre está ahí para detectar cosas y dar ideas.",
         "avatar": "",
+        "hidden": false,
         "socials": []
       },
       {
@@ -95,6 +104,7 @@
         "role": "Beta Tester",
         "description": "Forma parte de los principales beta testers de eventos, ya sean pequeños o grandes. En parte todos aportamos cuando hay que betatestear, pero siempre está ahí para detectar cosas y dar ideas.",
         "avatar": "",
+        "hidden": false,
         "socials": []
       }
     ]
@@ -108,81 +118,121 @@
           "id": "viciont-hardcore-3",
           "title": "Viciont Hardcore 3",
           "badge": "En desarrollo",
-          "tags": ["1.21.11", "Hardcore", "+10 bosses"],
+          "tags": [
+            "1.21.11",
+            "Hardcore",
+            "+10 bosses"
+          ],
           "description": "Un hardcore en proceso para la 1.21.11 que se basa en la serie Permadeath de ElRichMC y en el Dedsafío de ElDed.\n\nCuenta con más de **10 bosses**, más de **100 cambios de dificultad**, dimensiones nuevas, mecánicas nuevas, misiones diarias y mucho más. Es un proyecto que aún no sale a la luz, pero que será un antes y un después para Viciont Studios.",
           "image": "",
           "link": "",
-          "linkLabel": ""
+          "linkLabel": "",
+          "hidden": false
         },
         {
           "id": "ismanusmp",
           "title": "IsManuSMP",
           "badge": "",
-          "tags": ["SMP", "PvP", "Economía", "Casino"],
+          "tags": [
+            "SMP",
+            "PvP",
+            "Economía",
+            "Casino"
+          ],
           "description": "Un SMP del streamer IsManuPlay que ya ha tenido **más de 4 entregas** para sus seguidores. Abarca PvP, misiones, un sistema de economía, casino y mucho más.",
           "image": "",
           "link": "",
-          "linkLabel": ""
+          "linkLabel": "",
+          "hidden": false
         },
         {
           "id": "oneblock-manu-george",
           "title": "OneBlock With Manu and George",
           "badge": "Evento público",
-          "tags": ["OneBlock", "Hardcore", "15 fases"],
+          "tags": [
+            "OneBlock",
+            "Hardcore",
+            "15 fases"
+          ],
           "description": "Un OneBlock hardcore que se hizo con los streamers IsManuPlay y George10, donde había **15 fases y 15 cambios de dificultad** que tenían que sobrevivir, con estructuras, bosses e ítems custom.\n\nAdemás, es el primer evento público de Viciont Studios con assets y mods privados.",
           "image": "",
           "link": "",
-          "linkLabel": ""
+          "linkLabel": "",
+          "hidden": false
         },
         {
           "id": "croissants",
           "title": "Croissants",
           "badge": "",
-          "tags": ["SMP", "Java + Bedrock", "Eventos"],
+          "tags": [
+            "SMP",
+            "Java + Bedrock",
+            "Eventos"
+          ],
           "description": "Un SMP del streamer Crosszy, creado para sus espectadores en Java y Bedrock. Contó con eventos, misiones diarias, ítems especiales, sistema de economía y más.\n\nSu fuerte fueron las increíbles construcciones y los eventos que se hacían en el servidor, que hicieron más unida a la comunidad.",
           "image": "",
           "link": "",
-          "linkLabel": ""
+          "linkLabel": "",
+          "hidden": false
         },
         {
           "id": "hide-and-seek",
           "title": "Hide And Seek",
           "badge": "",
-          "tags": ["Evento", "Minijuego"],
+          "tags": [
+            "Evento",
+            "Minijuego"
+          ],
           "description": "Un evento para el streamer IsManuPlay donde se jugó al famoso hide and seek: los jugadores debían esconderse con un tamaño reducido en un inmenso mapa con ítems custom y monedas, mientras los cazadores los buscaban. Ganaba quien tuviera más monedas.",
           "image": "",
           "link": "",
-          "linkLabel": ""
+          "linkLabel": "",
+          "hidden": false
         },
         {
           "id": "hunger-games",
           "title": "Hunger Games",
           "badge": "",
-          "tags": ["Evento", "+60 jugadores", "PvP"],
+          "tags": [
+            "Evento",
+            "+60 jugadores",
+            "PvP"
+          ],
           "description": "Un evento para el streamer IsManuPlay donde se jugaron unos Hunger Games de **más de 60 personas**. Debían lootear recursos por el mapa sin que el borde los matara y luchar entre todos; el último jugador vivo ganaba.",
           "image": "",
           "link": "",
-          "linkLabel": ""
+          "linkLabel": "",
+          "hidden": false
         },
         {
           "id": "viciont-hardcore-2",
           "title": "Viciont Hardcore 2",
           "badge": "",
-          "tags": ["Hardcore", "40 jugadores", "28 días"],
+          "tags": [
+            "Hardcore",
+            "40 jugadores",
+            "28 días"
+          ],
           "description": "Un servidor hardcore que recreó la experiencia de Permadeath de ElRichMC, donde **40 jugadores** debían sobrevivir **28 días** para derrotar al Viciont Demon.\n\n8 jugadores sobrevivieron hasta el último día y al boss final.",
           "image": "",
           "link": "",
-          "linkLabel": ""
+          "linkLabel": "",
+          "hidden": false
         },
         {
           "id": "viciont-smp-2",
           "title": "Viciont SMP 2",
           "badge": "",
-          "tags": ["SMP", "Resource pack", "Mini eventos"],
+          "tags": [
+            "SMP",
+            "Resource pack",
+            "Mini eventos"
+          ],
           "description": "El primer SMP del estudio bien hecho. Se caracterizó por tener pequeños cambios de dificultad, mini eventos, un sistema de pranks y, sobre todo, un bonito **resource pack** que hacía que el juego se viera más vivo y con muchos detalles.",
           "image": "",
           "link": "",
-          "linkLabel": ""
+          "linkLabel": "",
+          "hidden": false
         }
       ]
     },
@@ -194,21 +244,31 @@
           "id": "viciont-protections",
           "title": "Viciont Protections",
           "badge": "Gratis",
-          "tags": ["1.21.1+", "Protecciones", "Permisos"],
+          "tags": [
+            "1.21.1+",
+            "Protecciones",
+            "Permisos"
+          ],
           "description": "Un plugin sencillo para la versión 1.21.1+ que sirve para que los jugadores puedan proteger zonas y otorgar permisos a otros jugadores. Se usó en el IsManuSMP de IsManuPlay y en Croissants de Crosszy.\n\nDale clic para ir al lugar de descarga del plugin y apoyar el proyecto.",
           "image": "",
           "link": "https://www.spigotmc.org/resources/viciont-protections.124614/",
-          "linkLabel": "Descargar en SpigotMC"
+          "linkLabel": "Descargar en SpigotMC",
+          "hidden": false
         },
         {
           "id": "viciont-guis-plugin",
           "title": "Viciont Guis Plugin",
           "badge": "",
-          "tags": ["API", "GUIs custom", "HUD"],
+          "tags": [
+            "API",
+            "GUIs custom",
+            "HUD"
+          ],
           "description": "Un plugin que se usa junto con el mod Viciont Guis. Es una API para que se pueda usar en el código de otros plugins y sirve para crear GUIs custom: ya sea una GUI que se abre con la tecla **G** por defecto, GUIs en inventarios vanilla o un HUD personalizado.",
           "image": "",
           "link": "https://github.com/CrissyjuanxD/ViciontGuiPluginAPI",
-          "linkLabel": "Ver en GitHub"
+          "linkLabel": "Ver en GitHub",
+          "hidden": false
         }
       ]
     },
@@ -220,11 +280,17 @@
           "id": "viciont-guis",
           "title": "Viciont Guis",
           "badge": "Cliente",
-          "tags": ["Client-side", "GUIs", "HUD", "Bossbar"],
+          "tags": [
+            "Client-side",
+            "GUIs",
+            "HUD",
+            "Bossbar"
+          ],
           "description": "Este mod es del lado del cliente y se usa con el plugin Viciont Guis. Es el que se encarga de renderizar y cargar las texturas de las GUIs, HUDs y bossbars que se hacen con el plugin.",
           "image": "",
           "link": "https://github.com/CrissyjuanxD/viciontguis",
-          "linkLabel": "Ver en GitHub"
+          "linkLabel": "Ver en GitHub",
+          "hidden": false
         }
       ]
     }
@@ -235,7 +301,12 @@
     "email": "viciontstudios@gmail.com",
     "priceRange": "$20 – $100+ USD",
     "priceNote": "Los precios pueden variar entre los 20 y más de 100 dólares, dependiendo de lo que se quiera.",
-    "services": ["Eventos", "Plugins", "Mods", "Servidores"]
+    "services": [
+      "Eventos",
+      "Plugins",
+      "Mods",
+      "Servidores"
+    ]
   },
   "footer": {
     "description": "Estudio dedicado a crear servidores, eventos, plugins y mods de Minecraft para que los jugadores vivan experiencias increíbles.",
