@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 5,
-    "updatedAt": "2026-09-25T07:49:46.431Z",
+    "version": 6,
+    "updatedAt": "2026-09-25T07:59:09.123Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -160,16 +160,16 @@
         {
           "id": "oneblock-manu-george",
           "title": "OneBlock With Manu and George",
-          "badge": "Evento público",
+          "badge": "Evento público (En Progreso)",
           "tags": [
             "OneBlock",
             "Hardcore",
-            "15 fases"
+            "Dificultades"
           ],
           "description": "Un OneBlock hardcore que se hizo con los streamers IsManuPlay y George10, donde había **15 fases y 15 cambios de dificultad** que tenían que sobrevivir, con estructuras, bosses e ítems custom.\n\nAdemás, es el primer evento público de Viciont Studios con assets y mods privados.",
           "image": "",
-          "link": "https://www.twitch.tv/videos/2861197331",
-          "linkLabel": "Ver Vod en Twitch (Temporal)",
+          "link": "https://www.youtube.com/watch?v=So32OS70Nt8&t=2802s",
+          "linkLabel": "Ver Evento",
           "hidden": false
         },
         {
@@ -190,21 +190,21 @@
         {
           "id": "hide-and-seek",
           "title": "Hide And Seek",
-          "badge": "",
+          "badge": "Finalizado",
           "tags": [
             "Evento",
             "Minijuego"
           ],
           "description": "Un evento para el streamer IsManuPlay donde se jugó al famoso hide and seek: los jugadores debían esconderse con un tamaño reducido en un inmenso mapa con ítems custom y monedas, mientras los cazadores los buscaban. Ganaba quien tuviera más monedas.",
           "image": "",
-          "link": "",
-          "linkLabel": "",
+          "link": "https://www.youtube.com/watch?v=pmDcWs4YvcQ",
+          "linkLabel": "Ver Evento",
           "hidden": false
         },
         {
           "id": "hunger-games",
           "title": "Hunger Games",
-          "badge": "",
+          "badge": "Finalizado",
           "tags": [
             "Evento",
             "+60 jugadores",
@@ -212,8 +212,8 @@
           ],
           "description": "Un evento para el streamer IsManuPlay donde se jugaron unos Hunger Games de **más de 60 personas**. Debían lootear recursos por el mapa sin que el borde los matara y luchar entre todos; el último jugador vivo ganaba.",
           "image": "",
-          "link": "",
-          "linkLabel": "",
+          "link": "https://www.youtube.com/watch?v=rg-sytoOY8M&t=3820s",
+          "linkLabel": "Ver Evento",
           "hidden": false
         },
         {
