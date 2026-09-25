@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 6,
-    "updatedAt": "2026-09-25T07:59:09.123Z",
+    "version": 7,
+    "updatedAt": "2026-09-25T08:15:14.133Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -270,7 +270,7 @@
         {
           "id": "viciont-guis-plugin",
           "title": "Viciont Guis Plugin",
-          "badge": "",
+          "badge": "Gratis",
           "tags": [
             "API",
             "GUIs custom",
@@ -291,7 +291,7 @@
         {
           "id": "viciont-guis",
           "title": "Viciont Guis",
-          "badge": "Cliente",
+          "badge": "Gratis",
           "tags": [
             "Client-side",
             "GUIs",
