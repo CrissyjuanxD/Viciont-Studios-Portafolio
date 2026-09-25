@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 13,
-    "updatedAt": "2026-09-25T22:57:20.582Z",
+    "version": 14,
+    "updatedAt": "2026-09-25T23:12:17.639Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -29,7 +29,8 @@
   },
   "socials": {
     "youtube": "https://www.youtube.com/@ViciontStudios",
-    "x": "https://x.com/pepoavilesg26"
+    "x": "https://x.com/pepoavilesg26",
+    "discord": "https://discord.gg/qZPUhPRtX"
   },
   "about": {
     "title": "Sobre nosotros",
