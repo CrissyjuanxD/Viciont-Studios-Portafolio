@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 2,
-    "updatedAt": "2026-09-25T07:32:01.244Z",
+    "version": 3,
+    "updatedAt": "2026-09-25T07:39:47.211Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -44,12 +44,24 @@
         "name": "CrissyjuanxD",
         "role": "Fundador · Developer",
         "description": "Este es el fundador del estudio. Se encarga del desarrollo de software de los eventos, de las texturas 2D y 3D y del gameplay design de los eventos.",
-        "avatar": "",
+        "avatar": "assets/uploads/miembro-crissyjuanxd-mugnhiffo4i.webp",
         "hidden": false,
         "socials": [
           {
             "type": "github",
             "url": "https://github.com/CrissyjuanxD"
+          },
+          {
+            "type": "youtube",
+            "url": "https://www.youtube.com/@CrissyjuanxD"
+          },
+          {
+            "type": "x",
+            "url": "https://x.com/pepoavilesg26"
+          },
+          {
+            "type": "instagram",
+            "url": "https://www.instagram.com/crissyjuanxd/"
           }
         ]
       },
