@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 14,
-    "updatedAt": "2026-09-25T23:12:17.639Z",
+    "version": 15,
+    "updatedAt": "2026-09-26T02:51:57.580Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -82,7 +82,7 @@
       },
       {
         "id": "pepe002",
-        "name": "Pepe002",
+        "name": "Pepe",
         "role": "Builder",
         "description": "Este es el principal builder del estudio; sus construcciones deslumbran en cada server en el que participa. Además, también aporta ideas.",
         "avatar": "assets/uploads/miembro-pepe002-muhk4dm42no.webp",
