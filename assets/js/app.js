@@ -328,7 +328,7 @@ function renderContact(c) {
 
 function showLoadError() {
   const msg = location.protocol === 'file:'
-    ? 'Abre la web desde un servidor (por ejemplo GitHub Pages) para cargar el contenido.'
+    ? 'Abre la web desde un servidor (por ejemplo Cloudflare Pages) para cargar el contenido.'
     : 'No se pudo cargar el contenido. Revisa tu conexión e inténtalo de nuevo.';
   $$('[data-cards]').forEach((g) => { g.innerHTML = emptyHTML(msg, true); });
   $('#team-grid').innerHTML = emptyHTML(msg, true);

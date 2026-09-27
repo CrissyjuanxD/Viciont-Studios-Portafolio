@@ -1,10 +1,10 @@
 <p align="center">
-  <a href="https://crissyjuanxd.github.io/Viciont-Studios-Portafolio/">
+  <a href="https://viciontstudios.pages.dev/">
     <img src="assets/img/og-image.png" alt="Viciont Studios" width="100%">
   </a>
 </p>
 
-<h1 align="center">Viciont Studios · Portafolio</h1>
+<h1 align="center">Viciont Studios</h1>
 
 <p align="center">
   <b>Servidores SMP, hardcores, eventos, plugins y mods de Minecraft.</b><br>
@@ -12,7 +12,7 @@
 </p>
 
 <p align="center">
-  🌐 <a href="https://crissyjuanxd.github.io/Viciont-Studios-Portafolio/"><b>crissyjuanxd.github.io/Viciont-Studios-Portafolio</b></a>
+  🌐 <a href="https://viciontstudios.pages.dev/"><b>viciontstudios.pages.dev</b></a>
 </p>
 
 ---
@@ -48,7 +48,7 @@ Todo el contenido de la web vive en [`data/content.json`](data/content.json) y s
 
 - **Acceso seguro:** se entra con un *token de acceso de GitHub* con permiso de escritura en este repositorio. Sin ese token nadie puede cambiar nada: la web es estática y GitHub es quien autoriza cada cambio.
 - **Borrador + vista previa en vivo:** los cambios se guardan como borrador en tu navegador y puedes verlos en la web en tiempo real antes de publicarlos.
-- **Publicar:** crea un commit en este repositorio (con las imágenes optimizadas en `assets/uploads/`) y GitHub Pages actualiza la web en 1-2 minutos. Las páginas abiertas se actualizan solas.
+- **Publicar:** crea un commit en este repositorio (con las imágenes optimizadas en `assets/uploads/`) y Cloudflare Pages actualiza la web en menos de un minuto. Las páginas abiertas se actualizan solas.
 - **Historial:** cada publicación queda guardada; desde el panel puedes volver a cualquier versión anterior.
 
 ## Estructura

@@ -39,7 +39,7 @@ const S = {
   draft: null,
   pendingDraft: null,
   tab: 'general',
-  uploads: new Map(), // ruta -> dataURL de imágenes recién subidas (mientras GitHub Pages despliega)
+  uploads: new Map(), // ruta -> dataURL de imágenes recién subidas (mientras la web se actualiza)
   publishing: false,
 };
 
@@ -1094,7 +1094,7 @@ async function runPublish(next, changes, message, { force = false } = {}) {
     <ol class="steps">
       <li class="step" data-step="1"><span class="step__dot"></span><div class="step__text"><strong>Preparando imágenes y contenido</strong><small></small></div></li>
       <li class="step" data-step="2"><span class="step__dot"></span><div class="step__text"><strong>Guardando la nueva versión en GitHub</strong><small></small></div></li>
-      <li class="step" data-step="3"><span class="step__dot"></span><div class="step__text"><strong>Actualizando la web (GitHub Pages)</strong><small>Suele tardar entre 30 segundos y 2 minutos.</small></div></li>
+      <li class="step" data-step="3"><span class="step__dot"></span><div class="step__text"><strong>Actualizando la web (Cloudflare)</strong><small>Suele tardar menos de un minuto.</small></div></li>
     </ol>
     <div id="publish-result"></div>
   </div>`, { size: 'lg', lock: true });
@@ -1164,8 +1164,8 @@ async function runPublish(next, changes, message, { force = false } = {}) {
     broadcast();
     modal.setLocked(false);
 
-    step(3, 'active', 'Esperando a GitHub Pages… (puedes cerrar esta ventana y seguir editando)');
-    const live = await waitForDeploy(content.meta.updatedAt, (secs) => step(3, 'active', `Esperando a GitHub Pages… ${secs} s (puedes cerrar esta ventana)`));
+    step(3, 'active', 'Esperando a Cloudflare… (puedes cerrar esta ventana y seguir editando)');
+    const live = await waitForDeploy(content.meta.updatedAt, (secs) => step(3, 'active', `Esperando a Cloudflare… ${secs} s (puedes cerrar esta ventana)`));
     if (!ui.isConnected) {
       toast(live ? '¡Tus cambios ya están en la web!' : 'Guardado en GitHub; la web se actualizará en unos minutos.', { type: 'success', timeout: 4000 });
       return;
@@ -1178,7 +1178,7 @@ async function runPublish(next, changes, message, { force = false } = {}) {
     } else {
       step(3, 'done', 'GitHub sigue desplegando');
       setTitle('Guardado en GitHub');
-      result(`<p>${icon('info')} <span>La versión está guardada. GitHub Pages está tardando más de lo normal; los cambios aparecerán en la web en unos minutos.</span></p>
+      result(`<p>${icon('info')} <span>La versión está guardada. Cloudflare está tardando más de lo normal; los cambios aparecerán en la web en unos minutos.</span></p>
         <div class="modal__actions"><button class="btn btn--primary" type="button" data-close>Cerrar</button></div>`);
     }
   } catch (err) {

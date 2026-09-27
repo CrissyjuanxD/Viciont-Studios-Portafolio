@@ -6,6 +6,6 @@ export const CONFIG = {
   branch: 'main',
   contentPath: 'data/content.json',
   uploadsDir: 'assets/uploads',
-  // URL pública de la web (GitHub Pages). Si algún día usas un dominio propio, cámbiala aquí.
-  siteUrl: 'https://crissyjuanxd.github.io/Viciont-Studios-Portafolio/',
+  // URL pública de la web (Cloudflare Pages). Si algún día usas un dominio propio, cámbiala aquí.
+  siteUrl: 'https://viciontstudios.pages.dev/',
 };
