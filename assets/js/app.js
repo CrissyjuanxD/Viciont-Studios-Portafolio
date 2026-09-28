@@ -22,10 +22,12 @@ const ROUTES = {
   proyectos: { view: 'projects' },
   plugins: { view: 'plugins' },
   mods: { view: 'mods' },
+  launcher: { view: 'launcher' },
+  descargar: { view: 'launcher' },
   contacto: { view: 'contact' },
 };
-const VIEW_ORDER = ['about', 'projects', 'plugins', 'mods', 'contact'];
-const VIEW_ROUTE = { about: 'sobre-nosotros', projects: 'proyectos', plugins: 'plugins', mods: 'mods', contact: 'contacto' };
+const VIEW_ORDER = ['about', 'projects', 'plugins', 'mods', 'launcher', 'contact'];
+const VIEW_ROUTE = { about: 'sobre-nosotros', projects: 'proyectos', plugins: 'plugins', mods: 'mods', launcher: 'launcher', contact: 'contacto' };
 const BASE_TITLE = document.title;
 const EMAIL_RE = /^[^\s@<>"']+@[^\s@<>"']+\.[^\s@<>"']+$/;
 
@@ -120,6 +122,7 @@ function labels(c) {
     projects: c.sections.projects.title,
     plugins: c.sections.plugins.title,
     mods: c.sections.mods.title,
+    launcher: 'Launcher',
     contact: c.contact.title,
   };
 }
@@ -166,6 +169,7 @@ function render(raw, { live = false } = {}) {
 
   renderHome(c, live);
   SECTION_KEYS.forEach((k) => renderSection(c, k));
+  renderPager(c, 'launcher');
   renderContact(c);
 
   const credit = $('#footer-credit');
@@ -287,9 +291,15 @@ function renderSection(c, key) {
     ? items.map((it, i) => cardHTML(it, key, i)).join('')
     : emptyHTML(`Muy pronto habrá ${meta.plural.toLowerCase()} por aquí.`);
   $(`[data-count-label="${key}"]`).textContent = `${pad2(items.length)} ${items.length === 1 ? meta.label : meta.plural}`.toUpperCase();
+  renderPager(c, key);
+}
 
+// Enlaces a la sección anterior y a la siguiente.
+function renderPager(c, view) {
+  const box = $(`[data-pager="${view}"]`);
+  if (!box) return;
   const L = labels(c);
-  const idx = VIEW_ORDER.indexOf(key);
+  const idx = VIEW_ORDER.indexOf(view);
   const prev = VIEW_ORDER[idx - 1];
   const next = VIEW_ORDER[idx + 1];
   const link = (v, dir) => `
@@ -297,7 +307,98 @@ function renderSection(c, key) {
       <small>${dir === 'prev' ? `${icon('arrowLeft')} Anterior` : `Siguiente ${icon('arrowRight')}`}</small>
       <strong>${escapeHtml(L[v])}</strong>
     </a>`;
-  $(`[data-pager="${key}"]`).innerHTML = `${prev ? link(prev, 'prev') : '<span></span>'}${next ? link(next, 'next') : '<span></span>'}`;
+  box.innerHTML = `${prev ? link(prev, 'prev') : '<span></span>'}${next ? link(next, 'next') : '<span></span>'}`;
+}
+
+// ---------------------------------------------------------------- launcher
+
+const LAUNCHER_REPO = 'CrissyjuanxD/Viciont-Studio-Launcher';
+const SHOTS = [
+  ['inicio', 'Inicio: las instancias que puedes jugar'],
+  ['instancia', 'Cada instancia con su fondo y un solo botón: Jugar'],
+  ['descargando', 'Descargas rápidas, con velocidad y tiempo restante'],
+  ['jugando', 'Mientras juegas, el launcher casi no gasta recursos'],
+  ['skins', 'Tus skins con vista 3D'],
+  ['login', 'Entra con tu cuenta de Microsoft o con tu nick'],
+  ['ajustes', 'Memoria, Java, resolución y más'],
+];
+let shotIndex = 0;
+
+function setShot(i) {
+  shotIndex = (i + SHOTS.length) % SHOTS.length;
+  const [file, caption] = SHOTS[shotIndex];
+  const img = $('#shot-img');
+  img.src = `assets/img/launcher/${file}.webp`;
+  img.alt = `Viciont Studios Launcher: ${caption}`;
+  $('#shot-cap').textContent = caption;
+  $$('[data-shot]').forEach((b) => {
+    const on = Number(b.dataset.shot) === shotIndex;
+    b.classList.toggle('is-active', on);
+    b.setAttribute('aria-pressed', String(on));
+  });
+}
+
+function openShot(i) {
+  setShot(i);
+  const [file, caption] = SHOTS[shotIndex];
+  const box = modal.open(`
+    <figure class="shot-view">
+      <img src="assets/img/launcher/${file}.webp" alt="${escapeHtml(`Viciont Studios Launcher: ${caption}`)}" width="1600" height="1000">
+      <figcaption>
+        <button class="btn btn--icon btn--sm" type="button" data-shot-step="-1" aria-label="Captura anterior">${icon('arrowLeft')}</button>
+        <span>${escapeHtml(caption)} <span class="mono">${shotIndex + 1}/${SHOTS.length}</span></span>
+        <button class="btn btn--icon btn--sm" type="button" data-shot-step="1" aria-label="Captura siguiente">${icon('arrowRight')}</button>
+      </figcaption>
+    </figure>`, { size: 'shot', label: 'Captura del launcher' });
+  box.querySelectorAll('[data-shot-step]').forEach((b) => b.addEventListener('click', () => openShot(shotIndex + Number(b.dataset.shotStep))));
+}
+
+function initLauncher() {
+  $('#shot-thumbs').innerHTML = SHOTS.map(([file, caption], i) => `
+    <button class="shots__thumb${i === 0 ? ' is-active' : ''}" type="button" data-shot="${i}" aria-pressed="${i === 0}" aria-label="${escapeHtml(caption)}">
+      <img src="assets/img/launcher/${file}.webp" alt="" loading="lazy" decoding="async" width="160" height="100">
+    </button>`).join('');
+  $('#shot-thumbs').addEventListener('click', (e) => {
+    const b = e.target.closest('[data-shot]');
+    if (b) setShot(Number(b.dataset.shot));
+  });
+  $('#shot-main').addEventListener('click', () => openShot(shotIndex));
+  document.addEventListener('keydown', (e) => {
+    if (!document.querySelector('.shot-view') || !['ArrowLeft', 'ArrowRight'].includes(e.key)) return;
+    openShot(shotIndex + (e.key === 'ArrowRight' ? 1 : -1));
+  });
+  $('#dl-btn').addEventListener('click', () => toast('Descargando el instalador de Viciont Studios Launcher…', { type: 'success' }));
+}
+
+const fmtSize = (n) => (n > 0 ? `${(n / 1048576).toFixed(n > 104857600 ? 0 : 1)} MB` : '');
+
+// Versión, fecha y tamaño de la última versión (API pública de GitHub; el botón ya funciona sin esto).
+let releaseAsked = false;
+async function loadRelease() {
+  if (releaseAsked) return;
+  releaseAsked = true;
+  const KEY = 'vs-launcher-release';
+  let info = null;
+  try { info = JSON.parse(sessionStorage.getItem(KEY) || 'null'); } catch { info = null; }
+  if (!info || Date.now() - info.at > 10 * 60000) {
+    try {
+      const res = await fetch(`https://api.github.com/repos/${LAUNCHER_REPO}/releases/latest`, { headers: { Accept: 'application/vnd.github+json' } });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const r = await res.json();
+      const assets = Array.isArray(r.assets) ? r.assets : [];
+      const exe = assets.find((a) => /Launcher-Setup-\d[\w.-]*\.exe$/i.test(a.name)) || assets.find((a) => /\.exe$/i.test(a.name));
+      info = { at: Date.now(), version: String(r.tag_name || '').replace(/^v/i, ''), date: r.published_at || null, url: exe?.browser_download_url || null, name: exe?.name || '', size: exe?.size || 0 };
+      try { sessionStorage.setItem(KEY, JSON.stringify(info)); } catch { /* sin almacenamiento */ }
+    } catch (err) {
+      console.warn('[viciont] no se pudo leer la última versión del launcher', err);
+      return;
+    }
+  }
+  if (/^\d+(\.\d+){1,3}$/.test(info.version)) $('#dl-version').textContent = `Versión ${info.version}`;
+  const d = info.date ? new Date(info.date) : null;
+  if (d && !Number.isNaN(d.getTime())) $('#dl-date').textContent = d.toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
+  if (info.name) $('#dl-file').textContent = [info.name, fmtSize(info.size)].filter(Boolean).join(' · ');
+  if (/^https:\/\/github\.com\/CrissyjuanxD\/Viciont-Studio-Launcher\/releases\/download\//.test(info.url || '')) $('#dl-btn').href = info.url;
 }
 
 function renderContact(c) {
@@ -425,6 +526,7 @@ function showView(view, anchor, initial) {
   const changing = state.view !== view;
   const apply = () => {
     state.view = view;
+    if (view === 'launcher') loadRelease();
     $$('.view').forEach((v) => v.classList.toggle('is-active', v.dataset.view === view));
     const name = VIEW_ROUTE[view];
     $$('[data-route]').forEach((a) => {
@@ -563,3 +665,6 @@ function bindChrome() {
     toast('Abriendo tu aplicación de correo…');
   });
 }
+
+// La galería y el botón de descarga del launcher (al final: usa constantes declaradas arriba).
+initLauncher();

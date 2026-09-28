@@ -31,6 +31,7 @@ Algunos de nuestros proyectos: **Viciont Hardcore 3**, **IsManuSMP**, **OneBlock
 | **Proyectos** | Los servidores y eventos que hemos hecho. |
 | **Plugins** | Plugins públicos, como *Viciont Protections* y *Viciont Guis Plugin*. |
 | **Mods** | Mods públicos, como *Viciont Guis*. |
+| **Launcher** | Descarga de **Viciont Studios Launcher** (botón *Descargar Launcher* de la barra de arriba): siempre la última versión, con capturas, sistemas compatibles y lo que incluye. La versión, la fecha y el tamaño se leen solos de GitHub; las capturas están en `assets/img/launcher/`. |
 | **Contáctanos** | Correo del estudio, rango de precios y un formulario que prepara el correo por ti. |
 
 **Características**

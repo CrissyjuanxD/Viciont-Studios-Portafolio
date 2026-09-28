@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Viciont Studios · Servidores, eventos, plugins y mods de Minecraft · CrissyjuanxD</title>
-  <meta name="description" content="Viciont Studios es un estudio creado por CrissyjuanxD dedicado a crear servidores de Minecraft (SMP, hardcores y eventos), plugins y mods.">
+  <meta name="description" content="Viciont Studios es un estudio creado por CrissyjuanxD dedicado a crear servidores de Minecraft (SMP, hardcores y eventos), plugins, mods y su propio launcher: Viciont Studios Launcher.">
   <meta name="author" content="CrissyjuanxD">
   <meta name="google-site-verification" content="QqKPga-wErd1xj6yTx7pZeBhN2la5kEW_UfT-4hkzFc">
   <meta name="theme-color" content="#07020d">
   <meta name="color-scheme" content="dark">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src 'none'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://api.github.com; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src 'none'">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <script src="assets/js/moved.js"></script>
   <link rel="canonical" href="https://viciontstudios.pages.dev/">
@@ -27,7 +27,7 @@
   <meta name="twitter:title" content="Viciont Studios">
   <meta name="twitter:description" content="Servidores SMP, hardcores, eventos, plugins y mods de Minecraft.">
   <meta name="twitter:image" content="https://viciontstudios.pages.dev/assets/img/og-image.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://viciontstudios.pages.dev/#viciont-studios","name":"Viciont Studios","alternateName":"Viciont","url":"https://viciontstudios.pages.dev/","logo":"https://viciontstudios.pages.dev/assets/img/icon-512.png","description":"Estudio creado por CrissyjuanxD: servidores de Minecraft (SMP, hardcores y eventos), plugins y mods.","founder":{"@id":"https://viciontstudios.pages.dev/#crissyjuanxd"},"sameAs":["https://www.youtube.com/@ViciontStudios","https://x.com/pepoavilesg26","https://discord.gg/qZPUhPRtX"]},{"@type":"Person","@id":"https://viciontstudios.pages.dev/#crissyjuanxd","name":"CrissyjuanxD","url":"https://viciontstudios.pages.dev/","sameAs":["https://github.com/CrissyjuanxD"]},{"@type":"WebSite","@id":"https://viciontstudios.pages.dev/#web","name":"Viciont Studios","url":"https://viciontstudios.pages.dev/","inLanguage":"es","publisher":{"@id":"https://viciontstudios.pages.dev/#viciont-studios"}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://viciontstudios.pages.dev/#viciont-studios","name":"Viciont Studios","alternateName":"Viciont","url":"https://viciontstudios.pages.dev/","logo":"https://viciontstudios.pages.dev/assets/img/icon-512.png","description":"Estudio creado por CrissyjuanxD: servidores de Minecraft (SMP, hardcores y eventos), plugins y mods.","founder":{"@id":"https://viciontstudios.pages.dev/#crissyjuanxd"},"sameAs":["https://www.youtube.com/@ViciontStudios","https://x.com/pepoavilesg26","https://discord.gg/qZPUhPRtX"]},{"@type":"Person","@id":"https://viciontstudios.pages.dev/#crissyjuanxd","name":"CrissyjuanxD","url":"https://viciontstudios.pages.dev/","sameAs":["https://github.com/CrissyjuanxD"]},{"@type":"WebSite","@id":"https://viciontstudios.pages.dev/#web","name":"Viciont Studios","url":"https://viciontstudios.pages.dev/","inLanguage":"es","publisher":{"@id":"https://viciontstudios.pages.dev/#viciont-studios"}},{"@type":"SoftwareApplication","@id":"https://viciontstudios.pages.dev/#launcher","name":"Viciont Studios Launcher","description":"Launcher de Minecraft de Viciont Studios para jugar sus eventos públicos y privados: instancias listas para jugar, cuentas premium y no premium, skins y actualizaciones automáticas.","applicationCategory":"GameApplication","operatingSystem":"Windows 10, Windows 11","url":"https://viciontstudios.pages.dev/#launcher","downloadUrl":"https://github.com/CrissyjuanxD/Viciont-Studio-Launcher/releases/latest","screenshot":"https://viciontstudios.pages.dev/assets/img/launcher/inicio.webp","inLanguage":"es","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@id":"https://viciontstudios.pages.dev/#crissyjuanxd"},"publisher":{"@id":"https://viciontstudios.pages.dev/#viciont-studios"}}]}</script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
@@ -94,6 +94,7 @@
           <li><a class="nav__link" href="#proyectos" data-route="proyectos"><span data-label="projects">Proyectos</span></a></li>
           <li><a class="nav__link" href="#plugins" data-route="plugins"><span data-label="plugins">Plugins</span></a></li>
           <li><a class="nav__link" href="#mods" data-route="mods"><span data-label="mods">Mods</span></a></li>
+          <li><a class="nav__link nav__link--dl" href="#launcher" data-route="launcher"><i data-icon="download"></i><span><span class="nav__dl-word">Descargar </span>Launcher</span></a></li>
           <li><a class="nav__link nav__link--cta" href="#contacto" data-route="contacto"><span data-label="contact">Contáctanos</span></a></li>
         </ul>
       </nav>
@@ -111,7 +112,8 @@
       <a class="mobile-menu__link" href="#proyectos" data-route="proyectos"><small>02</small><span data-label="projects">Proyectos</span></a>
       <a class="mobile-menu__link" href="#plugins" data-route="plugins"><small>03</small><span data-label="plugins">Plugins</span></a>
       <a class="mobile-menu__link" href="#mods" data-route="mods"><small>04</small><span data-label="mods">Mods</span></a>
-      <a class="mobile-menu__link" href="#contacto" data-route="contacto"><small>05</small><span data-label="contact">Contáctanos</span></a>
+      <a class="mobile-menu__link mobile-menu__link--dl" href="#launcher" data-route="launcher"><small>05</small><span>Launcher</span><i data-icon="download"></i></a>
+      <a class="mobile-menu__link" href="#contacto" data-route="contacto"><small>06</small><span data-label="contact">Contáctanos</span></a>
     </nav>
     <div class="mobile-menu__foot">
       <span class="mono">// síguenos</span>
@@ -261,6 +263,91 @@
       </div>
     </section>
 
+    <!-- ============ LAUNCHER ============ -->
+    <section class="view page" data-view="launcher" aria-labelledby="title-launcher">
+      <div class="container">
+        <header class="page-head">
+          <p class="crumbs"><span>viciont://</span><span>launcher</span><span class="caret"></span></p>
+          <h1 class="page-title" id="title-launcher"><span class="glitch" data-scramble data-text="Launcher">Launcher</span></h1>
+          <p class="page-intro">Este es nuestro launcher para que puedan disfrutar de nuestros eventos públicos o privados de una manera mucho más cómoda.</p>
+        </header>
+
+        <div class="launcher">
+          <div class="launcher__main">
+            <div class="launcher__card panel reveal">
+              <div class="launcher__app">
+                <img class="launcher__icon" src="assets/img/launcher/icono.png" alt="" width="96" height="96">
+                <div class="launcher__id">
+                  <p class="launcher__name">Viciont Studios Launcher</p>
+                  <p class="launcher__meta"><span id="dl-version">Última versión</span><span id="dl-date"></span></p>
+                </div>
+              </div>
+              <a class="dl-btn" id="dl-btn" href="https://github.com/CrissyjuanxD/Viciont-Studio-Launcher/releases/latest/download/Viciont-Studios-Launcher-Setup.exe" rel="noopener">
+                <span class="dl-btn__icon"><i data-icon="windows"></i></span>
+                <span class="dl-btn__text"><strong>Descargar para Windows</strong><small id="dl-file">Instalador gratuito · siempre la última versión</small></span>
+                <i data-icon="download"></i>
+              </a>
+              <ul class="launcher__facts">
+                <li><i data-icon="refresh"></i><span>Se actualiza solo: cuando sale una versión nueva, el launcher la instala sin que hagas nada.</span></li>
+                <li><i data-icon="shield"></i><span>Gratis, sin anuncios y sin tener que instalar Java.</span></li>
+              </ul>
+              <div class="launcher__links">
+                <a class="btn btn--sm btn--ghost" href="https://github.com/CrissyjuanxD/Viciont-Studio-Launcher/releases" target="_blank" rel="noopener noreferrer"><i data-icon="history"></i> Todas las versiones</a>
+                <a class="btn btn--sm btn--ghost" href="https://github.com/CrissyjuanxD/Viciont-Studio-Launcher#readme" target="_blank" rel="noopener noreferrer"><i data-icon="github"></i> Guía y novedades</a>
+              </div>
+              <details class="launcher__help">
+                <summary><i data-icon="info"></i> ¿Windows o el navegador te avisan al descargarlo?</summary>
+                <p>Es normal y no es un virus: el instalador es nuevo y no tiene un certificado de pago, así que Microsoft todavía no lo conoce.</p>
+                <ul>
+                  <li><b>Edge:</b> en Descargas, pulsa <b>⌄</b> junto a <i>Eliminar</i> → <b>Conservar</b> → <b>Mostrar más</b> → <b>Conservar de todas formas</b>.</li>
+                  <li><b>Chrome:</b> en Descargas, pulsa <b>Conservar</b>.</li>
+                  <li>Al abrirlo, si sale <i>«Windows protegió tu PC»</i>: <b>Más información → Ejecutar de todas formas</b>.</li>
+                </ul>
+              </details>
+            </div>
+
+            <div class="shots reveal" style="--i:1">
+              <button class="shots__main" type="button" id="shot-main" aria-label="Ampliar la captura">
+                <img id="shot-img" src="assets/img/launcher/inicio.webp" alt="Viciont Studios Launcher: inicio con las instancias disponibles" width="1600" height="1000" decoding="async">
+                <span class="shots__zoom" aria-hidden="true"><i data-icon="eye"></i></span>
+              </button>
+              <p class="shots__cap" id="shot-cap">Inicio: las instancias que puedes jugar</p>
+              <div class="shots__thumbs" id="shot-thumbs" role="group" aria-label="Capturas del launcher"></div>
+            </div>
+          </div>
+
+          <section class="launcher__block" aria-labelledby="title-os">
+            <h2 class="launcher__title reveal" id="title-os">Sistemas compatibles</h2>
+            <div class="os-grid">
+              <div class="os reveal"><span class="os__icon"><i data-icon="windows"></i></span><div><strong>Windows 11</strong><small>64 bits</small><span class="os__state"><i data-icon="check"></i>Compatible</span></div></div>
+              <div class="os reveal" style="--i:1"><span class="os__icon"><i data-icon="windows"></i></span><div><strong>Windows 10</strong><small>64 bits</small><span class="os__state"><i data-icon="check"></i>Compatible</span></div></div>
+              <div class="os os--no reveal" style="--i:2"><span class="os__icon"><i data-icon="apple"></i></span><div><strong>macOS</strong><small>Todavía no disponible</small></div></div>
+              <div class="os os--no reveal" style="--i:3"><span class="os__icon"><i data-icon="linux"></i></span><div><strong>Linux</strong><small>Todavía no disponible</small></div></div>
+            </div>
+            <ul class="reqs reveal">
+              <li><i data-icon="cube"></i><span><b>Minecraft: Java Edition</b> (cuenta de Microsoft) o un nick no premium registrado en el launcher.</span></li>
+              <li><i data-icon="sliders"></i><span><b>4 GB de RAM</b> como mínimo; 8 GB para las instancias con muchos mods.</span></li>
+              <li><i data-icon="download"></i><span><b>Sin instalar Java:</b> el launcher descarga el que necesita cada versión de Minecraft.</span></li>
+              <li><i data-icon="globe"></i><span><b>Conexión a internet</b> para descargar las instancias e iniciar sesión.</span></li>
+            </ul>
+          </section>
+
+          <section class="launcher__block" aria-labelledby="title-feat">
+            <h2 class="launcher__title reveal" id="title-feat">Qué incluye</h2>
+            <div class="feat-grid">
+              <article class="feat reveal"><span class="feat__icon"><i data-icon="grid"></i></span><h3>Instancias listas para jugar</h3><p>Cada evento con sus mods, configs y resource packs ya preparados. Pulsas <b>Jugar</b> y entras.</p></article>
+              <article class="feat reveal" style="--i:1"><span class="feat__icon"><i data-icon="lock"></i></span><h3>Eventos públicos y privados</h3><p>Las instancias privadas solo las ven y descargan los jugadores invitados.</p></article>
+              <article class="feat reveal" style="--i:2"><span class="feat__icon"><i data-icon="refresh"></i></span><h3>Siempre al día</h3><p>Cuando Viciont Studios actualiza una instancia, solo se descarga lo que cambió.</p></article>
+              <article class="feat reveal"><span class="feat__icon"><i data-icon="users"></i></span><h3>Premium y no premium</h3><p>Entra con tu cuenta de Microsoft o solo con tu nick, protegido con un código de recuperación.</p></article>
+              <article class="feat reveal" style="--i:1"><span class="feat__icon"><i data-icon="image"></i></span><h3>Skins con vista 3D</h3><p>Cambia tu skin y tu capa. Con cuenta no premium, también la ven los demás jugadores del launcher.</p></article>
+              <article class="feat reveal" style="--i:2"><span class="feat__icon"><i data-icon="shield"></i></span><h3>Descargas rápidas y seguras</h3><p>Todo se comprueba con su huella SHA-1 y, si se corta, continúa donde se quedó.</p></article>
+            </div>
+          </section>
+        </div>
+        <nav class="pager" data-pager="launcher" aria-label="Otras secciones"></nav>
+      </div>
+    </section>
+
     <!-- ============ CONTACTO ============ -->
     <section class="view page" data-view="contact" aria-labelledby="title-contact">
       <div class="container">
@@ -345,6 +432,7 @@
           <li><a href="#proyectos" data-route="proyectos"><span data-label="projects">Proyectos</span></a></li>
           <li><a href="#plugins" data-route="plugins"><span data-label="plugins">Plugins</span></a></li>
           <li><a href="#mods" data-route="mods"><span data-label="mods">Mods</span></a></li>
+          <li><a href="#launcher" data-route="launcher">Launcher</a></li>
           <li><a href="#contacto" data-route="contacto"><span data-label="contact">Contáctanos</span></a></li>
         </ul>
       </nav>
