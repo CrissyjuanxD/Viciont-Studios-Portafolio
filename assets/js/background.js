@@ -1,6 +1,3 @@
-// Fondo animado: espiral difuminada morada/rosa girando en círculos (WebGL).
-// Si el navegador no soporta WebGL se usa un degradado cónico en CSS (.bg-fallback).
-
 const VERT = `
 attribute vec2 aPos;
 void main() { gl_Position = vec4(aPos, 0.0, 1.0); }
@@ -128,7 +125,6 @@ export function startBackground(canvas, { intensity = 1 } = {}) {
     gl.useProgram(prog);
     const buf = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, buf);
-    // un triángulo que cubre toda la pantalla
     gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
     const loc = gl.getAttribLocation(prog, 'aPos');
     gl.enableVertexAttribArray(loc);
@@ -142,7 +138,6 @@ export function startBackground(canvas, { intensity = 1 } = {}) {
 
   function resize() {
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    // la espiral es difusa: renderizar a menos resolución la hace más suave y ligera
     const scale = window.innerWidth < 768 ? 0.42 : 0.5;
     const w = Math.max(2, Math.round(window.innerWidth * dpr * scale));
     const h = Math.max(2, Math.round(window.innerHeight * dpr * scale));

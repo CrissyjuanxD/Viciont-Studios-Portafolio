@@ -1,9 +1,6 @@
-// Efectos electrónicos / glitch de la web.
-
 export const reducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
 const finePointer = () => matchMedia('(hover: hover) and (pointer: fine)').matches;
 
-// ---------- Texto que se "descifra" ----------
 const GLYPHS = '!<>-_\\/[]{}=+*^?#01§$%&@ABCDEFXYZ';
 
 export function scramble(el, text, { duration = 750 } = {}) {
@@ -31,7 +28,6 @@ export function scramble(el, text, { duration = 750 } = {}) {
   el._scramble = requestAnimationFrame(step);
 }
 
-// ---------- Efecto de escritura en bucle ----------
 export function typeLoop(el, words) {
   if (!el) return;
   clearTimeout(el._typing);
@@ -57,7 +53,6 @@ export function typeLoop(el, words) {
   schedule(500);
 }
 
-// ---------- Contadores ----------
 export function countUp(el, to, { duration = 1100, pad = 2 } = {}) {
   if (!el) return;
   const fmt = (n) => String(n).padStart(pad, '0');
@@ -72,7 +67,6 @@ export function countUp(el, to, { duration = 1100, pad = 2 } = {}) {
   requestAnimationFrame(step);
 }
 
-// ---------- Aparición al hacer scroll ----------
 let io = null;
 export function observeReveals(scope = document, { instant = false } = {}) {
   const els = [...scope.querySelectorAll('.reveal:not(.in)')];
@@ -91,7 +85,6 @@ export function observeReveals(scope = document, { instant = false } = {}) {
   els.forEach((el) => io.observe(el));
 }
 
-// ---------- Inclinación 3D de tarjetas ----------
 export function bindTilt(root = document) {
   if (!finePointer() || reducedMotion()) return;
   root.addEventListener('pointermove', (e) => {
@@ -113,7 +106,6 @@ export function bindTilt(root = document) {
   });
 }
 
-// ---------- Ráfagas de glitch aleatorias ----------
 export function startGlitchBursts() {
   if (reducedMotion()) return;
   const inView = (el) => {
@@ -134,7 +126,6 @@ export function startGlitchBursts() {
   setTimeout(loop, 1400);
 }
 
-// ---------- Transición glitch entre secciones ----------
 export function glitchTransition(swap) {
   const layer = document.getElementById('transition-fx');
   if (!layer || reducedMotion()) { swap(); return; }
@@ -161,11 +152,10 @@ export function glitchTransition(swap) {
   }, 520);
 }
 
-// ---------- Pantalla de arranque ----------
 export function bootScreen() {
   const el = document.getElementById('boot');
   let seen = false;
-  try { seen = sessionStorage.getItem('vs-booted') === '1'; } catch { /* sin almacenamiento */ }
+  try { seen = sessionStorage.getItem('vs-booted') === '1'; } catch {}
   if (!el) return { done: () => {} };
   if (seen || reducedMotion()) {
     el.classList.add('boot--quick');
@@ -180,14 +170,13 @@ export function bootScreen() {
       const wait = Math.max(0, minTime - (performance.now() - t0));
       setTimeout(() => {
         el.classList.add('boot--out');
-        try { sessionStorage.setItem('vs-booted', '1'); } catch { /* sin almacenamiento */ }
+        try { sessionStorage.setItem('vs-booted', '1'); } catch {}
         setTimeout(() => el.remove(), 650);
       }, wait);
     },
   };
 }
 
-// ---------- Brillo que sigue al cursor ----------
 export function cursorGlow() {
   if (!finePointer() || reducedMotion()) return;
   const g = document.createElement('div');

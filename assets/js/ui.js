@@ -1,4 +1,3 @@
-// Componentes de interfaz compartidos: ventana modal, avisos y confirmaciones.
 import { icon, escapeHtml } from './core.js';
 
 const FOCUSABLE = 'a[href], button:not([disabled]), input:not([disabled]):not([type="hidden"]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])';

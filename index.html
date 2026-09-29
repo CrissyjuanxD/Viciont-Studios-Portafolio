@@ -44,7 +44,6 @@
 <body>
   <a class="skip-link" href="#main">Saltar al contenido</a>
 
-  <!-- Fondo -->
   <canvas id="bg" class="bg" aria-hidden="true"></canvas>
   <div class="bg-fallback" aria-hidden="true"></div>
   <div class="fx-layer" aria-hidden="true">
@@ -54,7 +53,6 @@
     <div class="fx-vignette"></div>
   </div>
 
-  <!-- Pantalla de arranque -->
   <div class="boot" id="boot" aria-hidden="true">
     <div class="boot__inner">
       <img class="boot__logo" src="assets/img/emblem-160.webp" alt="" width="160" height="140">
@@ -68,13 +66,11 @@
     </div>
   </div>
 
-  <!-- Aviso de vista previa (solo desde el panel) -->
   <div class="preview-bar" id="preview-bar" hidden>
     <i data-icon="eye"></i>
     <span id="preview-text">Vista previa en vivo · estos cambios aún no están publicados</span>
   </div>
 
-  <!-- Barra de navegación -->
   <header class="header" id="header">
     <div class="header__inner">
       <div class="header__left">
@@ -105,7 +101,6 @@
     </div>
   </header>
 
-  <!-- Menú móvil -->
   <div class="mobile-menu" id="mobile-menu" hidden>
     <nav class="mobile-menu__nav" aria-label="Menú móvil">
       <a class="mobile-menu__link" href="#sobre-nosotros" data-route="sobre-nosotros"><small>01</small><span data-label="about">Sobre nosotros</span></a>
@@ -127,7 +122,6 @@
 
   <main id="main" class="main" tabindex="-1">
 
-    <!-- ============ SOBRE NOSOTROS (página principal) ============ -->
     <section class="view" data-view="about" aria-labelledby="hero-title">
       <div class="hero">
         <div class="hero__inner">
@@ -223,7 +217,6 @@
       </div>
     </section>
 
-    <!-- ============ PROYECTOS / PLUGINS / MODS ============ -->
     <section class="view page" data-view="projects" aria-labelledby="title-projects">
       <div class="container">
         <header class="page-head">
@@ -263,7 +256,6 @@
       </div>
     </section>
 
-    <!-- ============ LAUNCHER ============ -->
     <section class="view page" data-view="launcher" aria-labelledby="title-launcher">
       <div class="container">
         <header class="page-head">
@@ -348,7 +340,6 @@
       </div>
     </section>
 
-    <!-- ============ CONTACTO ============ -->
     <section class="view page" data-view="contact" aria-labelledby="title-contact">
       <div class="container">
         <header class="page-head">
@@ -406,7 +397,6 @@
     </section>
   </main>
 
-  <!-- ============ FOOTER ============ -->
   <footer class="footer">
     <div class="footer__wordmark" aria-hidden="true">VICIONT</div>
     <div class="container footer__grid">
@@ -460,7 +450,6 @@
     </div>
   </footer>
 
-  <!-- Ventana modal reutilizable -->
   <div class="modal" id="modal" hidden>
     <div class="modal__backdrop" data-close></div>
     <div class="modal__dialog" role="dialog" aria-modal="true" tabindex="-1">

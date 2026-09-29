@@ -1,5 +1,3 @@
-// Web pública de Viciont Studios.
-// Todo el contenido sale de data/content.json, que se edita desde el panel (/admin/).
 import { CONFIG } from './config.js';
 import {
   normalizeContent, SECTION_KEYS, SECTION_META, SOCIAL_TYPES, escapeHtml, richText, inlineRich,
@@ -50,8 +48,6 @@ $('#year').textContent = String(new Date().getFullYear());
 if (state.preview) startPreview();
 else load({ live: true });
 
-// ---------------------------------------------------------------- carga
-
 async function fetchContent() {
   const res = await fetch(`${CONFIG.contentPath}?v=${Date.now()}`, { cache: 'no-store' });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -70,7 +66,6 @@ async function load({ live }) {
   }
 }
 
-// Revisa cada minuto si el contenido cambió (cambios publicados desde el panel).
 function startLiveUpdates() {
   let last = Date.now();
   const check = async () => {
@@ -82,7 +77,7 @@ function startLiveUpdates() {
         render(raw, { live: true });
         toast('Contenido actualizado', { type: 'success' });
       }
-    } catch { /* sin conexión: se intentará más tarde */ }
+    } catch {}
   };
   setInterval(() => { if (!document.hidden) check(); }, 60000);
   document.addEventListener('visibilitychange', () => {
@@ -90,7 +85,6 @@ function startLiveUpdates() {
   });
 }
 
-// Vista previa en vivo: recibe el borrador desde el panel de administración.
 function startPreview() {
   $('#preview-bar').hidden = false;
   document.documentElement.classList.add('is-preview');
@@ -106,15 +100,13 @@ function startPreview() {
       if (first) boot.done();
     };
     bc.postMessage({ type: 'hello' });
-  } catch { /* navegador sin BroadcastChannel */ }
+  } catch {}
   setTimeout(() => {
     if (got) return;
     $('#preview-text').textContent = 'Vista previa: abre el panel de administración en otra pestaña para ver tus cambios en vivo.';
     load({ live: false });
   }, 1500);
 }
-
-// ---------------------------------------------------------------- render
 
 function labels(c) {
   return {
@@ -134,7 +126,6 @@ function render(raw, { live = false } = {}) {
   state.content = c;
   state.stamp = c.meta.updatedAt;
 
-  // textos simples
   $$('[data-bind]').forEach((el) => {
     const v = getPath(c, el.dataset.bind);
     const text = typeof v === 'string' ? v : '';
@@ -144,7 +135,6 @@ function render(raw, { live = false } = {}) {
     if (el.tagName === 'P') el.hidden = !text;
   });
 
-  // nombre del estudio dividido en dos líneas (VICIONT / STUDIOS)
   const parts = c.site.name.trim().split(/\s+/);
   const first = parts[0] || c.site.name;
   const rest = parts.slice(1).join(' ');
@@ -152,11 +142,9 @@ function render(raw, { live = false } = {}) {
   $$('[data-brand-rest], [data-hero-rest]').forEach((el) => { el.textContent = rest; el.dataset.text = rest; });
   $('.hero__line--2').hidden = !rest;
 
-  // etiquetas de navegación = títulos de cada sección
   const L = labels(c);
   $$('[data-label]').forEach((el) => { el.textContent = L[el.dataset.label] ?? el.textContent; });
 
-  // redes del estudio
   for (const type of ['youtube', 'x', 'discord']) {
     const url = safeUrl(c.socials[type]);
     $$(`[data-social="${type}"]`).forEach((a) => {
@@ -294,7 +282,6 @@ function renderSection(c, key) {
   renderPager(c, key);
 }
 
-// Enlaces a la sección anterior y a la siguiente.
 function renderPager(c, view) {
   const box = $(`[data-pager="${view}"]`);
   if (!box) return;
@@ -309,8 +296,6 @@ function renderPager(c, view) {
     </a>`;
   box.innerHTML = `${prev ? link(prev, 'prev') : '<span></span>'}${next ? link(next, 'next') : '<span></span>'}`;
 }
-
-// ---------------------------------------------------------------- launcher
 
 const LAUNCHER_REPO = 'CrissyjuanxD/Viciont-Studio-Launcher';
 const SHOTS = [
@@ -372,7 +357,6 @@ function initLauncher() {
 
 const fmtSize = (n) => (n > 0 ? `${(n / 1048576).toFixed(n > 104857600 ? 0 : 1)} MB` : '');
 
-// Versión, fecha y tamaño de la última versión (API pública de GitHub; el botón ya funciona sin esto).
 let releaseAsked = false;
 async function loadRelease() {
   if (releaseAsked) return;
@@ -388,7 +372,7 @@ async function loadRelease() {
       const assets = Array.isArray(r.assets) ? r.assets : [];
       const exe = assets.find((a) => /Launcher-Setup-\d[\w.-]*\.exe$/i.test(a.name)) || assets.find((a) => /\.exe$/i.test(a.name));
       info = { at: Date.now(), version: String(r.tag_name || '').replace(/^v/i, ''), date: r.published_at || null, url: exe?.browser_download_url || null, name: exe?.name || '', size: exe?.size || 0 };
-      try { sessionStorage.setItem(KEY, JSON.stringify(info)); } catch { /* sin almacenamiento */ }
+      try { sessionStorage.setItem(KEY, JSON.stringify(info)); } catch {}
     } catch (err) {
       console.warn('[viciont] no se pudo leer la última versión del launcher', err);
       return;
@@ -437,8 +421,6 @@ function showLoadError() {
   fx.observeReveals(document, { instant: true });
   if (!state.view) route({ initial: true });
 }
-
-// ---------------------------------------------------------------- ventanas
 
 function openItem(key, id) {
   const sec = state.content?.sections[key];
@@ -507,8 +489,6 @@ function openMember(id) {
       ${list}
     </div>`, { size: 'sm' });
 }
-
-// ---------------------------------------------------------------- navegación
 
 function updateTitle() {
   const c = state.content;
@@ -666,5 +646,4 @@ function bindChrome() {
   });
 }
 
-// La galería y el botón de descarga del launcher (al final: usa constantes declaradas arriba).
 initLauncher();

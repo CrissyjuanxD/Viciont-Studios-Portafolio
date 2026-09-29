@@ -1,5 +1,3 @@
-// Utilidades compartidas entre la web pública y el panel de administración.
-
 export const SECTION_KEYS = ['projects', 'plugins', 'mods'];
 
 export const SECTION_META = {
@@ -20,7 +18,6 @@ export const SOCIAL_TYPES = {
   web: { label: 'Web', icon: 'globe' },
 };
 
-// ---------- Iconos (SVG en línea) ----------
 const BRAND = {
   youtube: 'M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z',
   x: 'M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z',
@@ -78,7 +75,6 @@ const UI = {
   file: '<path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6z"/><path d="M14 3v6h6"/>',
   verified: '<path d="M12 2.5l2.4 1.8 3-.2.9 2.9 2.4 1.8-.9 2.9.9 2.9-2.4 1.8-.9 2.9-3-.2L12 21.5l-2.4-1.8-3 .2-.9-2.9-2.4-1.8.9-2.9-.9-2.9 2.4-1.8.9-2.9 3 .2L12 2.5z"/><path d="M8.5 12l2.4 2.4 4.6-4.8"/>',
   instagram: '<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/>',
-  // pingüino de Linux
   linux: '<path d="M12 2.8c-2.2 0-3.6 1.8-3.6 4.3 0 1.6-.4 2.6-1.3 3.9C5.9 12.7 5 14.5 5 16.6 5 19.6 8 21.2 12 21.2s7-1.6 7-4.6c0-2.1-.9-3.9-2.1-5.6-.9-1.3-1.3-2.3-1.3-3.9 0-2.5-1.4-4.3-3.6-4.3z"/><path d="M9.3 13.2c.5 1.9 1.4 2.9 2.7 2.9s2.2-1 2.7-2.9"/><path d="M10.6 7.2v.01M13.4 7.2v.01M11 9.3l1 .7 1-.7"/>',
 };
 
@@ -91,14 +87,12 @@ export function icon(name, cls = '') {
   return `<svg class="${c}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${body}</svg>`;
 }
 
-// Sustituye <i data-icon="nombre"></i> por su SVG.
 export function hydrateIcons(root = document) {
   root.querySelectorAll('[data-icon]').forEach((el) => {
     el.outerHTML = icon(el.dataset.icon, el.className || '');
   });
 }
 
-// ---------- Texto seguro ----------
 export function escapeHtml(value) {
   return String(value ?? '')
     .replace(/&/g, '&amp;')
@@ -110,7 +104,6 @@ export function escapeHtml(value) {
 
 const bold = (s) => s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
 
-// Párrafos (línea en blanco), saltos de línea y **negrita**. Todo se escapa primero.
 export function richText(text) {
   return bold(escapeHtml(text))
     .split(/\n\s*\n/)
@@ -120,12 +113,10 @@ export function richText(text) {
     .join('');
 }
 
-// Versión en una sola línea (para tarjetas con texto recortado).
 export function inlineRich(text) {
   return bold(escapeHtml(text)).replace(/\s*\n+\s*/g, ' ').trim();
 }
 
-// ---------- URLs e imágenes ----------
 export function safeUrl(value) {
   let s = String(value ?? '').trim();
   if (!s) return '';
@@ -136,7 +127,7 @@ export function safeUrl(value) {
   try {
     const url = new URL(s);
     if (url.protocol === 'https:' || url.protocol === 'http:') return url.href;
-  } catch { /* URL inválida */ }
+  } catch {}
   return '';
 }
 
@@ -147,7 +138,6 @@ export function safeImage(value) {
   if (/^https:\/\//i.test(s)) {
     try { return new URL(s).href; } catch { return ''; }
   }
-  // Ruta relativa dentro del repositorio (p. ej. assets/uploads/foto.webp)
   if (/^[\w][\w\-./ %]*$/.test(s) && !s.includes('..')) return s;
   return '';
 }
@@ -177,7 +167,6 @@ export function handleFromUrl(url, type) {
   }
 }
 
-// ---------- Varios ----------
 export const pad2 = (n) => String(n).padStart(2, '0');
 
 export function initials(name) {
@@ -205,7 +194,6 @@ export function uid(prefix = 'id') {
 
 export const deepClone = (o) => (typeof structuredClone === 'function' ? structuredClone(o) : JSON.parse(JSON.stringify(o)));
 
-// Portada por defecto (cuando una tarjeta no tiene imagen).
 export function coverHTML(title, index = 0, code = '', emblemSrc = 'assets/img/emblem-160.webp') {
   return `<div class="cover cover--${index % 3}" aria-hidden="true">
     <div class="cover__grid"></div>
@@ -217,8 +205,6 @@ export function coverHTML(title, index = 0, code = '', emblemSrc = 'assets/img/e
   </div>`;
 }
 
-// ---------- Normalización del contenido ----------
-// Garantiza que el JSON siempre tenga la forma esperada, aunque venga incompleto.
 const str = (v, d = '') => (typeof v === 'string' ? v : v == null ? d : String(v));
 const list = (v) => (Array.isArray(v) ? v : []);
 const lines = (v) => {
