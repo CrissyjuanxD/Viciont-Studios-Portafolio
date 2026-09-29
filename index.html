@@ -27,7 +27,7 @@
   <meta name="twitter:title" content="Viciont Studios">
   <meta name="twitter:description" content="Servidores SMP, hardcores, eventos, plugins y mods de Minecraft.">
   <meta name="twitter:image" content="https://viciontstudios.pages.dev/assets/img/og-image.png">
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://viciontstudios.pages.dev/#viciont-studios","name":"Viciont Studios","alternateName":"Viciont","url":"https://viciontstudios.pages.dev/","logo":"https://viciontstudios.pages.dev/assets/img/icon-512.png","description":"Estudio creado por CrissyjuanxD: servidores de Minecraft (SMP, hardcores y eventos), plugins y mods.","founder":{"@id":"https://viciontstudios.pages.dev/#crissyjuanxd"},"sameAs":["https://www.youtube.com/@ViciontStudios","https://x.com/pepoavilesg26","https://discord.gg/qZPUhPRtX"]},{"@type":"Person","@id":"https://viciontstudios.pages.dev/#crissyjuanxd","name":"CrissyjuanxD","url":"https://viciontstudios.pages.dev/","sameAs":["https://github.com/CrissyjuanxD"]},{"@type":"WebSite","@id":"https://viciontstudios.pages.dev/#web","name":"Viciont Studios","url":"https://viciontstudios.pages.dev/","inLanguage":"es","publisher":{"@id":"https://viciontstudios.pages.dev/#viciont-studios"}},{"@type":"SoftwareApplication","@id":"https://viciontstudios.pages.dev/#launcher","name":"Viciont Studios Launcher","description":"Launcher de Minecraft de Viciont Studios para jugar sus eventos públicos y privados: instancias listas para jugar, cuentas premium y no premium, skins y actualizaciones automáticas.","applicationCategory":"GameApplication","operatingSystem":"Windows 10, Windows 11","url":"https://viciontstudios.pages.dev/#launcher","downloadUrl":"https://github.com/CrissyjuanxD/Viciont-Studio-Launcher/releases/latest","screenshot":"https://viciontstudios.pages.dev/assets/img/launcher/inicio.webp","inLanguage":"es","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@id":"https://viciontstudios.pages.dev/#crissyjuanxd"},"publisher":{"@id":"https://viciontstudios.pages.dev/#viciont-studios"}}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://viciontstudios.pages.dev/#viciont-studios","name":"Viciont Studios","alternateName":"Viciont","url":"https://viciontstudios.pages.dev/","logo":"https://viciontstudios.pages.dev/assets/img/icon-512.png","description":"Estudio creado por CrissyjuanxD: servidores de Minecraft (SMP, hardcores y eventos), plugins y mods.","founder":{"@id":"https://viciontstudios.pages.dev/#crissyjuanxd"},"sameAs":["https://www.youtube.com/@ViciontStudios","https://x.com/pepoavilesg26","https://discord.gg/qZPUhPRtX"]},{"@type":"Person","@id":"https://viciontstudios.pages.dev/#crissyjuanxd","name":"CrissyjuanxD","url":"https://viciontstudios.pages.dev/","sameAs":["https://github.com/CrissyjuanxD"]},{"@type":"WebSite","@id":"https://viciontstudios.pages.dev/#web","name":"Viciont Studios","url":"https://viciontstudios.pages.dev/","inLanguage":"es","publisher":{"@id":"https://viciontstudios.pages.dev/#viciont-studios"}},{"@type":"SoftwareApplication","@id":"https://viciontstudios.pages.dev/#launcher","name":"Viciont Studios Launcher","description":"Launcher de Minecraft de Viciont Studios para jugar sus eventos públicos y privados: instancias listas para jugar, cuentas premium y no premium, skins y actualizaciones automáticas.","applicationCategory":"GameApplication","operatingSystem":"Windows 10, Windows 11, macOS 13+, Linux","url":"https://viciontstudios.pages.dev/#launcher","downloadUrl":"https://github.com/CrissyjuanxD/Viciont-Studio-Launcher/releases/latest","screenshot":"https://viciontstudios.pages.dev/assets/img/launcher/inicio.webp","inLanguage":"es","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"author":{"@id":"https://viciontstudios.pages.dev/#crissyjuanxd"},"publisher":{"@id":"https://viciontstudios.pages.dev/#viciont-studios"}}]}</script>
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
@@ -275,27 +275,56 @@
                 </div>
               </div>
               <a class="dl-btn" id="dl-btn" href="https://github.com/CrissyjuanxD/Viciont-Studio-Launcher/releases/latest/download/Viciont-Studios-Launcher-Setup.exe" rel="noopener">
-                <span class="dl-btn__icon"><i data-icon="windows"></i></span>
-                <span class="dl-btn__text"><strong>Descargar para Windows</strong><small id="dl-file">Instalador gratuito · siempre la última versión</small></span>
+                <span class="dl-btn__icon" id="dl-icon"><i data-icon="windows"></i></span>
+                <span class="dl-btn__text"><strong id="dl-title">Descargar para Windows</strong><small id="dl-file">Instalador gratuito · siempre la última versión</small></span>
                 <i data-icon="download"></i>
               </a>
               <ul class="launcher__facts">
-                <li><i data-icon="refresh"></i><span>Se actualiza solo: cuando sale una versión nueva, el launcher la instala sin que hagas nada.</span></li>
+                <li><i data-icon="refresh"></i><span id="dl-fact">Se actualiza solo: cuando sale una versión nueva, el launcher la instala sin que hagas nada.</span></li>
                 <li><i data-icon="shield"></i><span>Gratis, sin anuncios y sin tener que instalar Java.</span></li>
               </ul>
+              <div class="dl-alt">
+                <p class="dl-alt__title">Descargas para cada sistema</p>
+                <div class="dl-alt__grid">
+                  <a class="dl-alt__item" data-os="win" href="https://github.com/CrissyjuanxD/Viciont-Studio-Launcher/releases/latest/download/Viciont-Studios-Launcher-Setup.exe" rel="noopener"><i data-icon="windows"></i><span><strong>Windows</strong><small>Instalador .exe</small></span></a>
+                  <a class="dl-alt__item" data-os="mac" href="https://github.com/CrissyjuanxD/Viciont-Studio-Launcher/releases/latest/download/Viciont-Studios-Launcher-mac.dmg" rel="noopener"><i data-icon="apple"></i><span><strong>macOS</strong><small>Apple e Intel</small></span></a>
+                  <div class="dl-alt__item" data-os="linux"><i data-icon="linux"></i><span><strong>Linux</strong><small><a href="https://github.com/CrissyjuanxD/Viciont-Studio-Launcher/releases/latest/download/Viciont-Studios-Launcher-linux.AppImage" rel="noopener">AppImage</a> · <a href="https://github.com/CrissyjuanxD/Viciont-Studio-Launcher/releases/latest/download/Viciont-Studios-Launcher-linux.deb" rel="noopener">.deb</a> · <a href="https://github.com/CrissyjuanxD/Viciont-Studio-Launcher/releases/latest/download/Viciont-Studios-Launcher-linux.rpm" rel="noopener">.rpm</a></small></span></div>
+                </div>
+              </div>
               <div class="launcher__links">
                 <a class="btn btn--sm btn--ghost" href="https://github.com/CrissyjuanxD/Viciont-Studio-Launcher/releases" target="_blank" rel="noopener noreferrer"><i data-icon="history"></i> Todas las versiones</a>
                 <a class="btn btn--sm btn--ghost" href="https://github.com/CrissyjuanxD/Viciont-Studio-Launcher#readme" target="_blank" rel="noopener noreferrer"><i data-icon="github"></i> Guía y novedades</a>
               </div>
-              <details class="launcher__help">
-                <summary><i data-icon="info"></i> ¿Windows o el navegador te avisan al descargarlo?</summary>
-                <p>Es normal y no es un virus: el instalador es nuevo y no tiene un certificado de pago, así que Microsoft todavía no lo conoce.</p>
-                <ul>
-                  <li><b>Edge:</b> en Descargas, pulsa <b>⌄</b> junto a <i>Eliminar</i> → <b>Conservar</b> → <b>Mostrar más</b> → <b>Conservar de todas formas</b>.</li>
-                  <li><b>Chrome:</b> en Descargas, pulsa <b>Conservar</b>.</li>
-                  <li>Al abrirlo, si sale <i>«Windows protegió tu PC»</i>: <b>Más información → Ejecutar de todas formas</b>.</li>
-                </ul>
-              </details>
+              <div class="launcher__helps" id="dl-helps">
+                <details class="launcher__help" data-os="win">
+                  <summary><i data-icon="info"></i> ¿Windows o el navegador te avisan al descargarlo?</summary>
+                  <p>Es normal y no es un virus: el instalador es nuevo y no tiene un certificado de pago, así que Microsoft todavía no lo conoce.</p>
+                  <ul>
+                    <li><b>Edge:</b> en Descargas, pulsa <b>⌄</b> junto a <i>Eliminar</i> → <b>Conservar</b> → <b>Mostrar más</b> → <b>Conservar de todas formas</b>.</li>
+                    <li><b>Chrome:</b> en Descargas, pulsa <b>Conservar</b>.</li>
+                    <li>Al abrirlo, si sale <i>«Windows protegió tu PC»</i>: <b>Más información → Ejecutar de todas formas</b>.</li>
+                  </ul>
+                </details>
+                <details class="launcher__help" data-os="mac">
+                  <summary><i data-icon="info"></i> ¿Cómo lo instalo en Mac?</summary>
+                  <p>Abre el <b>.dmg</b> y arrastra <b>Viciont Studios Launcher</b> a la carpeta <b>Aplicaciones</b>. Funciona en Mac con chip Apple (M1 o posterior) y con Intel.</p>
+                  <ul>
+                    <li>La primera vez, macOS dirá que no puede comprobar la app: es normal, porque no tiene un certificado de pago de Apple. Cierra el aviso sin moverlo a la papelera.</li>
+                    <li>Ve a <b>Ajustes del Sistema → Privacidad y seguridad</b>, baja hasta el aviso del launcher y pulsa <b>Abrir igualmente</b>. Solo se hace una vez.</li>
+                    <li>Si dice que <i>«está dañado»</i>, abre <b>Terminal</b> y escribe <code>xattr -cr "/Applications/Viciont Studios Launcher.app"</code>.</li>
+                    <li>Si macOS te pide usar el llavero después de actualizar, pulsa <b>Permitir siempre</b>: ahí se guarda tu sesión cifrada.</li>
+                  </ul>
+                </details>
+                <details class="launcher__help" data-os="linux">
+                  <summary><i data-icon="info"></i> ¿Cómo lo instalo en Linux?</summary>
+                  <ul>
+                    <li><b>AppImage</b> (cualquier distribución): dale permiso para ejecutarse (<i>Propiedades → Permitir ejecutar como programa</i> o <code>chmod +x</code>) y ábrela. Se actualiza sola.</li>
+                    <li><b>.deb</b> (Ubuntu, Debian, Linux Mint, Pop!_OS): <code>sudo apt install ./Viciont-Studios-Launcher-linux.deb</code></li>
+                    <li><b>.rpm</b> (Fedora, openSUSE): <code>sudo dnf install ./Viciont-Studios-Launcher-linux.rpm</code></li>
+                    <li>Con .deb o .rpm, el launcher te avisa cuando sale una versión nueva y la descargas desde aquí.</li>
+                  </ul>
+                </details>
+              </div>
             </div>
 
             <div class="shots reveal" style="--i:1">
@@ -313,8 +342,8 @@
             <div class="os-grid">
               <div class="os reveal"><span class="os__icon"><i data-icon="windows"></i></span><div><strong>Windows 11</strong><small>64 bits</small><span class="os__state"><i data-icon="check"></i>Compatible</span></div></div>
               <div class="os reveal" style="--i:1"><span class="os__icon"><i data-icon="windows"></i></span><div><strong>Windows 10</strong><small>64 bits</small><span class="os__state"><i data-icon="check"></i>Compatible</span></div></div>
-              <div class="os os--no reveal" style="--i:2"><span class="os__icon"><i data-icon="apple"></i></span><div><strong>macOS</strong><small>Todavía no disponible</small></div></div>
-              <div class="os os--no reveal" style="--i:3"><span class="os__icon"><i data-icon="linux"></i></span><div><strong>Linux</strong><small>Todavía no disponible</small></div></div>
+              <div class="os reveal" style="--i:2"><span class="os__icon"><i data-icon="apple"></i></span><div><strong>macOS</strong><small>13 Ventura o superior · chip Apple e Intel</small><span class="os__state"><i data-icon="check"></i>Compatible</span></div></div>
+              <div class="os reveal" style="--i:3"><span class="os__icon"><i data-icon="linux"></i></span><div><strong>Linux</strong><small>64 bits · AppImage, .deb o .rpm</small><span class="os__state"><i data-icon="check"></i>Compatible</span></div></div>
             </div>
             <ul class="reqs reveal">
               <li><i data-icon="cube"></i><span><b>Minecraft: Java Edition</b> (cuenta de Microsoft) o un nick no premium registrado en el launcher.</span></li>

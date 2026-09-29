@@ -298,6 +298,38 @@ function renderPager(c, view) {
 }
 
 const LAUNCHER_REPO = 'CrissyjuanxD/Viciont-Studio-Launcher';
+const DL_BASE = `https://github.com/${LAUNCHER_REPO}/releases/latest/download`;
+const PLATFORMS = {
+  win: {
+    name: 'Windows', icon: 'windows', file: 'Viciont-Studios-Launcher-Setup.exe', asset: /Launcher-Setup-\d[\w.-]*\.exe$/i,
+    sub: 'Instalador gratuito · siempre la última versión',
+    fact: 'Se actualiza solo: cuando sale una versión nueva, el launcher la instala sin que hagas nada.',
+    toast: 'Descargando el instalador de Viciont Studios Launcher…',
+  },
+  mac: {
+    name: 'Mac', icon: 'apple', file: 'Viciont-Studios-Launcher-mac.dmg', asset: /Launcher-\d[\w.-]*-mac\.dmg$/i,
+    sub: 'Para Mac con chip Apple o Intel · macOS 13 o superior',
+    fact: 'Te avisa cuando sale una versión nueva: la descargas desde aquí y la arrastras a Aplicaciones.',
+    toast: 'Descargando Viciont Studios Launcher para Mac…',
+  },
+  linux: {
+    name: 'Linux', icon: 'linux', file: 'Viciont-Studios-Launcher-linux.AppImage', asset: /^Viciont-Studios-Launcher-linux\.AppImage$/i,
+    sub: 'AppImage para cualquier distribución · también en .deb y .rpm',
+    fact: 'Con la AppImage se actualiza solo; con .deb o .rpm te avisa cuando sale una versión nueva.',
+    toast: 'Descargando la AppImage de Viciont Studios Launcher…',
+  },
+};
+
+function detectPlatform() {
+  const ua = navigator.userAgent || '';
+  const p = String(navigator.userAgentData?.platform || navigator.platform || '');
+  if (/android|iphone|ipad|ipod/i.test(ua) || (/mac/i.test(p) && navigator.maxTouchPoints > 1)) return null;
+  if (/mac/i.test(p) || /Mac OS X/.test(ua)) return 'mac';
+  if (/linux|x11|cros/i.test(p) || /Linux|X11|CrOS/.test(ua)) return 'linux';
+  if (/win/i.test(p) || /Windows/.test(ua)) return 'win';
+  return null;
+}
+const PLATFORM = detectPlatform();
 const SHOTS = [
   ['inicio', 'Inicio: las instancias que puedes jugar'],
   ['instancia', 'Cada instancia con su fondo y un solo botón: Jugar'],
@@ -352,7 +384,18 @@ function initLauncher() {
     if (!document.querySelector('.shot-view') || !['ArrowLeft', 'ArrowRight'].includes(e.key)) return;
     openShot(shotIndex + (e.key === 'ArrowRight' ? 1 : -1));
   });
-  $('#dl-btn').addEventListener('click', () => toast('Descargando el instalador de Viciont Studios Launcher…', { type: 'success' }));
+  const os = PLATFORMS[PLATFORM] || PLATFORMS.win;
+  const btn = $('#dl-btn');
+  btn.href = `${DL_BASE}/${os.file}`;
+  $('#dl-icon').innerHTML = icon(os.icon);
+  $('#dl-title').textContent = `Descargar para ${os.name}`;
+  $('#dl-file').textContent = os.sub;
+  $('#dl-fact').textContent = os.fact;
+  $$('.dl-alt__item').forEach((el) => el.classList.toggle('is-current', el.dataset.os === (PLATFORM || 'win')));
+  const helps = $('#dl-helps');
+  const mine = PLATFORM && helps.querySelector(`[data-os="${PLATFORM}"]`);
+  if (mine) helps.prepend(mine);
+  btn.addEventListener('click', () => toast(os.toast, { type: 'success' }));
 }
 
 const fmtSize = (n) => (n > 0 ? `${(n / 1048576).toFixed(n > 104857600 ? 0 : 1)} MB` : '');
@@ -361,7 +404,7 @@ let releaseAsked = false;
 async function loadRelease() {
   if (releaseAsked) return;
   releaseAsked = true;
-  const KEY = 'vs-launcher-release';
+  const KEY = 'vs-launcher-release-2';
   let info = null;
   try { info = JSON.parse(sessionStorage.getItem(KEY) || 'null'); } catch { info = null; }
   if (!info || Date.now() - info.at > 10 * 60000) {
@@ -370,8 +413,7 @@ async function loadRelease() {
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const r = await res.json();
       const assets = Array.isArray(r.assets) ? r.assets : [];
-      const exe = assets.find((a) => /Launcher-Setup-\d[\w.-]*\.exe$/i.test(a.name)) || assets.find((a) => /\.exe$/i.test(a.name));
-      info = { at: Date.now(), version: String(r.tag_name || '').replace(/^v/i, ''), date: r.published_at || null, url: exe?.browser_download_url || null, name: exe?.name || '', size: exe?.size || 0 };
+      info = { at: Date.now(), version: String(r.tag_name || '').replace(/^v/i, ''), date: r.published_at || null, assets: assets.map((a) => ({ name: a.name, url: a.browser_download_url, size: a.size })) };
       try { sessionStorage.setItem(KEY, JSON.stringify(info)); } catch {}
     } catch (err) {
       console.warn('[viciont] no se pudo leer la última versión del launcher', err);
@@ -381,8 +423,11 @@ async function loadRelease() {
   if (/^\d+(\.\d+){1,3}$/.test(info.version)) $('#dl-version').textContent = `Versión ${info.version}`;
   const d = info.date ? new Date(info.date) : null;
   if (d && !Number.isNaN(d.getTime())) $('#dl-date').textContent = d.toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' });
-  if (info.name) $('#dl-file').textContent = [info.name, fmtSize(info.size)].filter(Boolean).join(' · ');
-  if (/^https:\/\/github\.com\/CrissyjuanxD\/Viciont-Studio-Launcher\/releases\/download\//.test(info.url || '')) $('#dl-btn').href = info.url;
+  const os = PLATFORMS[PLATFORM] || PLATFORMS.win;
+  const file = (info.assets || []).find((a) => os.asset.test(a.name || ''));
+  if (!file) return;
+  $('#dl-file').textContent = [file.name, fmtSize(file.size)].filter(Boolean).join(' · ');
+  if (/^https:\/\/github\.com\/CrissyjuanxD\/Viciont-Studio-Launcher\/releases\/download\//.test(file.url || '')) $('#dl-btn').href = file.url;
 }
 
 function renderContact(c) {
