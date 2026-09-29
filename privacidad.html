@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    if (location.hostname === 'crissyjuanxd.github.io') location.replace('https://viciontstudios.pages.dev/privacidad');
+  </script>
+  <title>Privacidad · Viciont Studios</title>
+  <meta name="description" content="Qué datos recogen la web de Viciont Studios y Viciont Studios Launcher, para qué los usamos, cuánto tiempo los guardamos y cómo pedir que se borren.">
+  <meta name="theme-color" content="#07020d">
+  <link rel="canonical" href="https://viciontstudios.pages.dev/privacidad">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:wght@400;500;600;700&family=Share+Tech+Mono&display=swap">
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #06020c;
+      --panel: rgba(13, 5, 24, 0.74);
+      --line: rgba(196, 140, 255, 0.16);
+      --line-strong: rgba(214, 160, 255, 0.3);
+      --text: #f7f2ff;
+      --text-2: #cfc2e8;
+      --muted: #9b8cba;
+      --pink-hot: #ff2bd6;
+      --grad: linear-gradient(100deg, #a855f7 0%, #ec4899 60%, #ff2bd6 100%);
+      --grad-soft: linear-gradient(135deg, rgba(168, 85, 247, 0.24), rgba(236, 72, 153, 0.18));
+      --font-display: 'Bebas Neue', Impact, 'Arial Narrow', sans-serif;
+      --font-ui: 'Chakra Petch', 'Segoe UI', system-ui, sans-serif;
+      --font-mono: 'Share Tech Mono', ui-monospace, Consolas, monospace;
+    }
+    * { box-sizing: border-box; margin: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      min-height: 100vh;
+      background: radial-gradient(60vmax 60vmax at 15% 0%, rgba(124, 58, 237, 0.32), transparent 60%),
+                  radial-gradient(50vmax 50vmax at 95% 100%, rgba(236, 72, 153, 0.24), transparent 60%), var(--bg);
+      background-attachment: fixed;
+      color: var(--text); font: 400 1rem/1.65 var(--font-ui);
+    }
+    body::after { content: ''; position: fixed; inset: 0; z-index: 0; pointer-events: none; background: repeating-linear-gradient(to bottom, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 3px); }
+    a { color: #f9a8d4; text-underline-offset: 3px; }
+    a:hover { color: #fff; }
+    b { color: #fff; font-weight: 600; }
+    .wrap { position: relative; z-index: 1; width: min(100% - 32px, 820px); margin: 0 auto; }
+    .top { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 0; }
+    .brand { display: inline-flex; align-items: center; gap: 12px; color: #fff; text-decoration: none; }
+    .brand img { width: 46px; height: auto; filter: drop-shadow(0 0 14px rgba(168, 85, 247, 0.7)); }
+    .brand span { display: grid; line-height: 1; }
+    .brand strong { font: 400 1.7rem/0.9 var(--font-display); letter-spacing: 0.06em; }
+    .brand small { font: 400 0.7rem/1 var(--font-mono); letter-spacing: 0.42em; color: #f0abfc; }
+    .back { display: inline-flex; align-items: center; gap: 8px; padding: 10px 16px; border-radius: 12px; border: 1px solid var(--line-strong); background: rgba(255, 255, 255, 0.04); color: #fff; font: 600 0.78rem/1 var(--font-ui); letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; transition: border-color 0.2s, box-shadow 0.2s; }
+    .back:hover { border-color: var(--pink-hot); box-shadow: 0 0 24px rgba(236, 72, 153, 0.45); }
+    main { padding: clamp(20px, 5vw, 48px) 0 56px; }
+    .crumbs { font: 400 0.9rem/1 var(--font-mono); letter-spacing: 0.08em; color: var(--muted); }
+    .crumbs span { color: #f0abfc; }
+    .crumbs::after { content: ''; display: inline-block; width: 8px; height: 14px; margin-left: 4px; vertical-align: -2px; background: var(--pink-hot); animation: blink 1s steps(1) infinite; }
+    @keyframes blink { 50% { opacity: 0; } }
+    h1 { margin-top: 10px; font: 400 clamp(3.4rem, 12vw, 6.2rem)/0.9 var(--font-display); letter-spacing: 0.01em; text-shadow: -3px 0 rgba(255, 43, 214, 0.55), 3px 0 rgba(122, 92, 255, 0.55), 0 0 40px rgba(168, 85, 247, 0.5); }
+    .lead { max-width: 62ch; margin-top: 16px; font-size: 1.06rem; color: var(--text-2); }
+    .updated { margin-top: 10px; font: 400 0.82rem/1.4 var(--font-mono); letter-spacing: 0.06em; color: var(--muted); }
+    .toc { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 22px; padding: 0; list-style: none; }
+    .toc li { padding: 0; }
+    .toc li::before { display: none; }
+    .toc a { display: inline-block; padding: 7px 12px; border-radius: 999px; border: 1px solid var(--line); background: rgba(255, 255, 255, 0.03); color: var(--text-2); font-size: 0.84rem; text-decoration: none; transition: border-color 0.2s, color 0.2s; }
+    .toc a:hover { border-color: var(--pink-hot); color: #fff; }
+    .summary { position: relative; margin-top: 30px; padding: 22px 24px; border-radius: 18px; border: 1px solid var(--line-strong); background: var(--grad-soft), var(--panel); box-shadow: 0 30px 70px -40px rgba(236, 72, 153, 0.7); }
+    .summary h2 { margin: 0 0 12px; font-size: 1.9rem; }
+    .summary h2::after { display: none; }
+    section { margin-top: 44px; scroll-margin-top: 20px; }
+    h2 { font: 400 clamp(1.9rem, 5vw, 2.5rem)/1 var(--font-display); letter-spacing: 0.03em; }
+    h2::after { content: ''; display: block; width: 46px; height: 3px; margin-top: 10px; border-radius: 3px; background: var(--grad); box-shadow: 0 0 14px rgba(236, 72, 153, 0.7); }
+    h3 { margin-top: 24px; font: 600 0.82rem/1.3 var(--font-ui); letter-spacing: 0.16em; text-transform: uppercase; color: #f0abfc; }
+    section > p, section > ul, h3 + p, h3 + ul { margin-top: 12px; }
+    p { color: var(--text-2); }
+    ul { display: grid; gap: 10px; padding: 0; list-style: none; }
+    li { position: relative; padding-left: 22px; color: var(--text-2); }
+    li::before { content: ''; position: absolute; left: 2px; top: 0.62em; width: 8px; height: 8px; border-radius: 2px; background: var(--grad); box-shadow: 0 0 8px rgba(236, 72, 153, 0.7); }
+    .note { margin-top: 16px; padding: 14px 16px; border-left: 3px solid var(--pink-hot); border-radius: 0 12px 12px 0; background: rgba(255, 255, 255, 0.04); }
+    .foot { position: relative; z-index: 1; padding: 22px 0 32px; border-top: 1px solid var(--line); font: 400 0.8rem/1.6 var(--font-mono); letter-spacing: 0.04em; color: var(--muted); }
+    @media (max-width: 560px) {
+      .top { padding: 16px 0; }
+      .brand img { width: 38px; }
+      .brand strong { font-size: 1.45rem; }
+      .back { padding: 9px 12px; font-size: 0.72rem; }
+      .summary { padding: 18px 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .crumbs::after { animation: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <a class="brand" href="/" aria-label="Viciont Studios, ir a la web">
+        <img src="/assets/img/emblem-160.webp" alt="" width="160" height="140">
+        <span><strong>VICIONT</strong><small>STUDIOS</small></span>
+      </a>
+      <a class="back" href="/">Volver a la web</a>
+    </header>
+
+    <main>
+      <p class="crumbs">viciont://<span>privacidad</span></p>
+      <h1>Privacidad</h1>
+      <p class="lead">Qué datos recogen la web de Viciont Studios y <b>Viciont Studios Launcher</b>, para qué los usamos, cuánto tiempo los guardamos y cómo puedes pedir que los borremos.</p>
+      <p class="updated">Última actualización: 29 de septiembre de 2026</p>
+
+      <ul class="toc" aria-label="En esta página">
+        <li><a href="#web">La web</a></li>
+        <li><a href="#launcher">El launcher</a></li>
+        <li><a href="#uso">Para qué</a></li>
+        <li><a href="#tiempo">Cuánto tiempo</a></li>
+        <li><a href="#terceros">Otros servicios</a></li>
+        <li><a href="#decisiones">Tus decisiones</a></li>
+      </ul>
+
+      <div class="summary">
+        <h2>En resumen</h2>
+        <ul>
+          <li>La web no usa cookies, analíticas ni publicidad, y no te pide ningún dato.</li>
+          <li>El launcher guarda tu nick y un registro básico de actividad para que puedas jugar y para ayudarte si algo falla.</li>
+          <li>Nunca guardamos contraseñas, tokens de sesión, códigos de recuperación, tus archivos ni tu dirección IP.</li>
+          <li>No vendemos ni compartimos tus datos con nadie.</li>
+        </ul>
+      </div>
+
+      <section id="responsable">
+        <h2>Quiénes somos</h2>
+        <p>Viciont Studios es un estudio de servidores, eventos, plugins y mods de Minecraft creado por <b>CrissyjuanxD</b>. Somos los responsables de esta web y de Viciont Studios Launcher. Para cualquier duda sobre tus datos, escríbenos a <a href="mailto:viciontstudios@gmail.com">viciontstudios@gmail.com</a>.</p>
+      </section>
+
+      <section id="web">
+        <h2>La web</h2>
+        <ul>
+          <li><b>Sin cookies, analíticas ni publicidad.</b> No te pedimos ningún dato para verla ni para descargar el launcher.</li>
+          <li><b>Contacto:</b> el formulario no envía nada por sí solo, solo prepara un correo en tu programa de correo. Recibimos únicamente lo que tú decidas enviarnos y lo usamos para contestarte.</li>
+          <li><b>Tu navegador:</b> mientras la pestaña está abierta, la web guarda datos técnicos como la última versión del launcher o si ya viste la animación de entrada. No son datos personales y no salen de tu navegador.</li>
+          <li><b>Alojamiento y descargas:</b> la web está en Cloudflare Pages, consulta a GitHub cuál es la última versión del launcher y las descargas salen de GitHub. Como cualquier servidor, tratan datos técnicos de la conexión (como la IP) para funcionar y protegerse, según sus propias políticas.</li>
+        </ul>
+      </section>
+
+      <section id="launcher">
+        <h2>Viciont Studios Launcher</h2>
+        <h3>En tu equipo</h3>
+        <p>Tus ajustes, instancias, mundos y los registros del launcher se quedan en tu equipo. Tus sesiones se guardan cifradas por el sistema: con Windows, con el llavero de macOS o con el llavero del sistema en Linux.</p>
+
+        <h3>Al iniciar sesión</h3>
+        <ul>
+          <li><b>Cuenta de Microsoft:</b> la contraseña solo se escribe en la página oficial de Microsoft; el launcher nunca la ve ni la guarda. Tu sesión de Minecraft no se envía a nuestro servidor: tu cuenta se comprueba con Mojang, como en cualquier servidor de Minecraft.</li>
+          <li><b>Sin cuenta premium:</b> tu nick queda reservado con un código de recuperación. En nuestro servidor guardamos el nick, la fecha de registro y una huella cifrada del código, nunca el código.</li>
+        </ul>
+
+        <h3>Lo que envía a nuestro servidor</h3>
+        <ul>
+          <li><b>Tu ficha de jugador:</b> nick, identificador de tu cuenta de Minecraft, tipo de cuenta, la primera y la última vez que usaste el launcher, su versión, tu país aproximado, la última instancia que jugaste y si estás jugando ahora.</li>
+          <li><b>Registro de actividad:</b> cuándo abres el launcher, entras o sales, cambias tu skin o tu capa, descargas o actualizas instancias, empiezas y dejas de jugar, y los errores. Va con tu nick, la versión del launcher, tu sistema operativo y tu memoria RAM.</li>
+          <li><b>Informes de error:</b> si el juego se cierra con un error, su informe (crash report) y el registro del juego. Las rutas de tu equipo se acortan para no incluir tu nombre de usuario.</li>
+          <li><b>Tu skin no premium:</b> la imagen de tu skin, para que la vean los demás jugadores del launcher.</li>
+        </ul>
+        <p class="note">Nunca se envían contraseñas, tokens de sesión, códigos de recuperación, tus archivos ni tu dirección IP. El país lo calcula Cloudflare a partir de la conexión. Para frenar abusos, como muchos intentos seguidos con un código, usamos una huella cifrada e irreversible de la conexión.</p>
+      </section>
+
+      <section id="uso">
+        <h2>Para qué los usamos</h2>
+        <ul>
+          <li>Para que entres con tu cuenta o tu nick en las instancias y eventos de Viciont Studios, y para que nadie se haga pasar por ti.</li>
+          <li>Para que los demás jugadores vean tu skin.</li>
+          <li>Para saber quién está jugando durante un evento.</li>
+          <li>Para ayudarte cuando algo falla y arreglar los errores del launcher.</li>
+        </ul>
+        <p>No vendemos tus datos, no los compartimos con nadie y no los usamos para publicidad.</p>
+      </section>
+
+      <section id="tiempo">
+        <h2>Cuánto tiempo los guardamos</h2>
+        <ul>
+          <li><b>Registro de actividad e informes de error:</b> 30 días. Después se borran solos.</li>
+          <li><b>Ficha de jugador, nick registrado y skin:</b> mientras uses el launcher o hasta que nos pidas que los borremos.</li>
+        </ul>
+      </section>
+
+      <section id="acceso">
+        <h2>Quién los ve</h2>
+        <p>Solo el equipo de Viciont Studios, desde un panel privado protegido con contraseña y verificación en dos pasos. Los datos se guardan en los servicios de Cloudflare de Viciont Studios.</p>
+      </section>
+
+      <section id="terceros">
+        <h2>Otros servicios</h2>
+        <p>Para funcionar, el launcher se conecta con estos servicios. Cada uno tiene su propia política de privacidad:</p>
+        <ul>
+          <li><b>Microsoft y Mojang:</b> inicio de sesión, skins premium y archivos del juego.</li>
+          <li><b>Modrinth, Fabric, Quilt, Forge y NeoForge:</b> mods y cargadores de las instancias.</li>
+          <li><b>Eclipse Adoptium:</b> Java, cuando Mojang no ofrece la versión que hace falta.</li>
+          <li><b>GitHub:</b> descargas y actualizaciones del launcher.</li>
+          <li><b>PlayerDB:</b> comprobar si un nick no premium pertenece ya a una cuenta premium.</li>
+          <li><b>Discord:</b> si lo tienes abierto, el launcher muestra en tu perfil qué instancia miras o juegas. Se conecta con Discord directamente en tu equipo.</li>
+        </ul>
+      </section>
+
+      <section id="decisiones">
+        <h2>Tus decisiones</h2>
+        <ul>
+          <li>Puedes pedirnos una copia de tus datos o que los borremos (ficha de jugador, nick registrado, skin y registros) escribiendo a <a href="mailto:viciontstudios@gmail.com">viciontstudios@gmail.com</a>. Para proteger tu cuenta, puede que te pidamos demostrar que el nick es tuyo.</li>
+          <li>Puedes desactivar la presencia en Discord en <b>Ajustes → Launcher</b>.</li>
+          <li>Al desinstalar el launcher en Windows puedes elegir borrar también todos sus datos de tu equipo.</li>
+        </ul>
+      </section>
+
+      <section id="menores">
+        <h2>Menores de edad</h2>
+        <p>El launcher no pide más datos que el nick. Si eres menor de edad, lee esta página con tu madre, tu padre o la persona que te cuida, y escribidnos si queréis que borremos tus datos.</p>
+      </section>
+
+      <section id="cambios">
+        <h2>Cambios</h2>
+        <p>Si cambia algo de lo que recogemos, lo explicaremos en esta página y actualizaremos la fecha de arriba.</p>
+      </section>
+    </main>
+
+    <footer class="foot">© 2026 Viciont Studios · No afiliado a Mojang Studios ni a Microsoft · <a href="/">viciontstudios.pages.dev</a></footer>
+  </div>
+</body>
+</html>

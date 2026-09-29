@@ -33,6 +33,7 @@ Algunos de nuestros proyectos: **Viciont Hardcore 3**, **IsManuSMP**, **OneBlock
 | **Mods** | Mods públicos, como *Viciont Guis*. |
 | **Launcher** | Descarga de **Viciont Studios Launcher** (botón *Descargar Launcher* de la barra de arriba): siempre la última versión, con capturas, sistemas compatibles y lo que incluye. Detecta tu sistema y ofrece su descarga (**.exe** para Windows, **.dmg** para macOS, **AppImage**, **.deb** o **.rpm** para Linux), con las demás a mano y ayuda para instalarlo en cada uno. La versión, la fecha y el tamaño se leen solos de GitHub; las capturas están en `assets/img/launcher/`. |
 | **Contáctanos** | Correo del estudio, rango de precios y un formulario que prepara el correo por ti. |
+| **Privacidad** ([`/privacidad`](https://viciontstudios.pages.dev/privacidad)) | Qué datos recogen la web y el launcher, para qué, cuánto tiempo se guardan y cómo pedir que se borren. Enlazada desde el pie de página. |
 
 **Características**
 
@@ -58,6 +59,7 @@ Todo el contenido de la web vive en [`data/content.json`](data/content.json) y s
 ├── index.html            Web pública
 ├── admin/index.html      Panel de administración
 ├── 404.html              Página de error
+├── privacidad.html       Política de privacidad (/privacidad)
 ├── data/content.json     Todo el contenido editable
 └── assets/
     ├── css/              base.css · site.css · admin.css

@@ -530,6 +530,8 @@
 .footer__col .footer__cta { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: #f9a8d4; }
 .footer__bottom { position: relative; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 24px; padding: 20px 0 calc(26px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); font-size: 0.84rem; color: var(--muted); }
 .footer__credit { color: var(--text-2); }
+.footer__legal a { color: var(--text-2); text-underline-offset: 3px; transition: color 0.2s; }
+.footer__legal a:hover { color: #fff; }
 .credit-glitch { position: relative; display: inline-block; font-weight: 700; background: var(--grad); -webkit-background-clip: text; background-clip: text; color: transparent; }
 .credit-glitch:hover { animation: title-glitch 0.5s steps(2) 2; }
 .to-top { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px; border: 1px solid var(--line-strong); background: rgba(255, 255, 255, 0.04); color: #fff; transition: background 0.25s, border-color 0.25s, transform 0.25s var(--ease); }
