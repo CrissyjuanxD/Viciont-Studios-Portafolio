@@ -107,12 +107,13 @@
     <main>
       <p class="crumbs">viciont://<span>privacidad</span></p>
       <h1>Privacidad</h1>
-      <p class="lead">Qué datos recogen la web de Viciont Studios y <b>Viciont Studios Launcher</b>, para qué los usamos, cuánto tiempo los guardamos y cómo puedes pedir que los borremos.</p>
-      <p class="updated">Última actualización: 30 de septiembre de 2026</p>
+      <p class="lead">Qué datos recogen la web de Viciont Studios, <b>Viciont Studios Launcher</b> y <b>Viciont Studios Bot</b> (nuestro bot de Discord), para qué los usamos, cuánto tiempo los guardamos y cómo puedes pedir que los borremos.</p>
+      <p class="updated">Última actualización: 1 de octubre de 2026</p>
 
       <ul class="toc" aria-label="En esta página">
         <li><a href="#web">La web</a></li>
         <li><a href="#launcher">El launcher</a></li>
+        <li><a href="#bot">El bot de Discord</a></li>
         <li><a href="#uso">Para qué</a></li>
         <li><a href="#tiempo">Cuánto tiempo</a></li>
         <li><a href="#terceros">Otros servicios</a></li>
@@ -124,6 +125,7 @@
         <ul>
           <li>La web no usa cookies, analíticas ni publicidad, y no te pide ningún dato.</li>
           <li>El launcher guarda tu nick y un registro básico de actividad para que puedas jugar y para ayudarte si algo falla.</li>
+          <li>En Discord, Viciont Studios Bot solo apunta el nick que escribes en el canal de nicks y quién lo escribió.</li>
           <li>Nunca guardamos contraseñas, tokens de sesión, códigos de recuperación, tus archivos ni tu dirección IP.</li>
           <li>No vendemos ni compartimos tus datos con nadie.</li>
         </ul>
@@ -166,10 +168,22 @@
         <p class="note">Nunca se envían contraseñas, tokens de sesión, códigos de recuperación, tus archivos ni tu dirección IP. El país lo calcula Cloudflare a partir de la conexión. Para frenar abusos, como muchos intentos seguidos con un código, usamos una huella cifrada e irreversible de la conexión.</p>
       </section>
 
+      <section id="bot">
+        <h2>Viciont Studios Bot (Discord)</h2>
+        <p>En los servidores de Discord donde está activado, el bot lee el canal de nicks para darte acceso a las instancias privadas del launcher (y, más adelante, a la whitelist del servidor de Minecraft).</p>
+        <ul>
+          <li><b>Lo que guarda:</b> por cada mensaje del canal de nicks que tiene un nick válido, ese nick, el identificador y el nombre de Discord de quien lo escribió, el identificador del mensaje y su fecha. También el nombre y el identificador de los canales y servidores donde se activó.</li>
+          <li><b>Lo que no guarda:</b> los demás mensajes del canal de nicks (los lee y los descarta), los mensajes de otros canales ni los mensajes privados.</li>
+          <li><b>Quién lo ve:</b> el servidor del launcher lo consulta para saber qué nicks pueden ver una instancia privada, y el equipo de Viciont Studios ve esa lista en el launcher y puede retirar a alguien.</li>
+        </ul>
+        <p class="note">Discord trata tus mensajes según su propia política de privacidad. Lo que guarda el bot está en los servicios de Cloudflare de Viciont Studios.</p>
+      </section>
+
       <section id="uso">
         <h2>Para qué los usamos</h2>
         <ul>
           <li>Para que entres con tu cuenta o tu nick en las instancias y eventos de Viciont Studios, y para que nadie se haga pasar por ti.</li>
+          <li>Para darte acceso a una instancia privada cuando escribes tu nick en el canal de nicks de Discord.</li>
           <li>Para que los demás jugadores vean tu skin.</li>
           <li>Para saber quién está jugando durante un evento.</li>
           <li>Para ayudarte cuando algo falla y arreglar los errores del launcher.</li>
@@ -182,6 +196,7 @@
         <ul>
           <li><b>Registro de actividad e informes de error:</b> 30 días. Después se borran solos.</li>
           <li><b>Ficha de jugador, nick registrado y skin:</b> mientras uses el launcher o hasta que nos pidas que los borremos.</li>
+          <li><b>Tu nick del canal de nicks de Discord:</b> mientras tu mensaje siga en el canal. Si lo borras, el bot lo olvida en pocos minutos; si el canal deja de usarse para nicks, se borra todo lo de ese canal.</li>
         </ul>
       </section>
 
@@ -208,6 +223,7 @@
         <ul>
           <li>Puedes pedirnos una copia de tus datos o que los borremos (ficha de jugador, nick registrado, skin y registros) escribiendo a <a href="mailto:viciontstudios@gmail.com">viciontstudios@gmail.com</a>. Para proteger tu cuenta, puede que te pidamos demostrar que el nick es tuyo.</li>
           <li>Puedes desactivar la presencia en Discord en <b>Ajustes → Launcher</b>.</li>
+          <li>Para que Viciont Studios Bot olvide tu nick, borra tu mensaje del canal de nicks.</li>
           <li>Al desinstalar el launcher en Windows puedes elegir borrar también todos sus datos de tu equipo.</li>
         </ul>
       </section>
