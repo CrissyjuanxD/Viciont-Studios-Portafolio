@@ -560,8 +560,8 @@
   box-shadow: 0 20px 44px -18px rgba(236, 72, 153, 0.95), 0 0 0 1px rgba(255, 255, 255, 0.14) inset;
   transition: transform 0.3s var(--ease), box-shadow 0.3s;
 }
-.dl-btn::before { content: ''; position: absolute; inset: 0; z-index: -1; background: repeating-linear-gradient(115deg, transparent 0 18px, rgba(255, 255, 255, 0.07) 18px 36px); animation: dl-stripes 1.6s linear infinite; }
-@keyframes dl-stripes { to { background-position: 51px 0; } }
+.dl-btn::before { content: ''; position: absolute; top: 0; bottom: 0; left: -42px; right: 0; z-index: -1; background: repeating-linear-gradient(115deg, transparent 0 18px, rgba(255, 255, 255, 0.07) 18px 36px); animation: dl-stripes 1.25s linear infinite; }
+@keyframes dl-stripes { to { transform: translateX(39.7216px); } }
 .dl-btn::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(115deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%); transform: translateX(-120%); transition: transform 0.8s var(--ease); }
 .dl-btn:hover { transform: translateY(-3px); box-shadow: 0 26px 54px -16px rgba(255, 43, 214, 1), 0 0 0 1px rgba(255, 255, 255, 0.25) inset; }
 .dl-btn:hover::after { transform: translateX(120%); }
