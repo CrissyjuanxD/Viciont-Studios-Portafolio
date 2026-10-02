@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 21,
-    "updatedAt": "2026-10-02T03:42:04.783Z",
+    "version": 22,
+    "updatedAt": "2026-10-02T04:00:41.581Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -272,6 +272,19 @@
           "hidden": false
         },
         {
+          "id": "manu-buildbattle",
+          "title": "Manu BuildBattle",
+          "badge": "Finalizado",
+          "tags": [
+            "Evento"
+          ],
+          "description": "Este fue el primer evento de Viciont Studios, realizado en el IsManuSMP 3.\nEste evento conto con 70 participantes activos para competir a quien construía mejor.\nManu evaluó uno por uno a cada construcción hasta quedar 2, donde se hizo una final para saber el ganador de 25 dolores.",
+          "image": "",
+          "link": "https://www.youtube.com/@ismanuplay",
+          "linkLabel": "Este evento actualmente no se puede ver.",
+          "hidden": false
+        },
+        {
           "id": "viciont-hardcore-2",
           "title": "Viciont Hardcore 2",
           "badge": "Finalizado",
@@ -299,6 +312,22 @@
           "image": "",
           "link": "https://discord.gg/qZPUhPRtX",
           "linkLabel": "Descubre mas del servidor.",
+          "hidden": false
+        },
+        {
+          "id": "nasheland-3",
+          "title": "Nasheland 3",
+          "badge": "Finalizado",
+          "tags": [
+            "Mods",
+            "SMP",
+            "Aventura",
+            "RPG"
+          ],
+          "description": "Este server se hizo en colaboración con MeelHD,.\nFue un server en la 1.16.5 con mas de 80 Mods por descubrir, tuvo una buena actividad en el server con mas de 30 personas jugando.\n\nFue el primer servidor de mods que se hace a nombre de viciont studios.",
+          "image": "assets/uploads/proyecto-nasheland-3-muqfqpv1bd5.webp",
+          "link": "https://discord.gg/8R6Ex4dfK",
+          "linkLabel": "Descubre mas",
           "hidden": false
         }
       ]
