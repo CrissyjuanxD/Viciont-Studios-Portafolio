@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 18,
-    "updatedAt": "2026-10-02T03:30:34.490Z",
+    "version": 19,
+    "updatedAt": "2026-10-02T03:37:05.905Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -209,7 +209,7 @@
             "Dificultades"
           ],
           "description": "Un OneBlock hardcore que se hizo con los streamers IsManuPlay y ElGeorge16, donde había **15 fases y 15 cambios de dificultad** que tenían que sobrevivir, con estructuras, bosses e ítems custom.\n\nAdemás, es el primer evento público de Viciont Studios con assets y mods privados.",
-          "image": "",
+          "image": "assets/uploads/proyecto-oneblock-with-manu-and-george-muqewdiocwe.webp",
           "link": "https://www.youtube.com/live/So32OS70Nt8?t=0s",
           "linkLabel": "Ver Evento",
           "hidden": false
