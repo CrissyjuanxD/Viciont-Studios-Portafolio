@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 16,
-    "updatedAt": "2026-09-28T08:49:40.058Z",
+    "version": 17,
+    "updatedAt": "2026-10-02T03:26:46.924Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -178,7 +178,7 @@
             "+10 bosses"
           ],
           "description": "Un hardcore en proceso para la 1.21.11 que se basa en la serie Permadeath de ElRichMC y en el Dedsafío de ElDed.\n\nCuenta con más de **10 bosses**, más de **100 cambios de dificultad**, dimensiones nuevas, mecánicas nuevas, misiones diarias y mucho más. Es un proyecto que aún no sale a la luz, pero que será un antes y un después para Viciont Studios.",
-          "image": "",
+          "image": "assets/uploads/proyecto-viciont-hardcore-3-muqej3ws9kr.webp",
           "link": "https://discord.gg/qZPUhPRtX",
           "linkLabel": "Descubre avances del servidor.",
           "hidden": false
@@ -194,7 +194,7 @@
             "Casino"
           ],
           "description": "Un SMP del streamer IsManuPlay que ya ha tenido **más de 4 entregas** para sus seguidores. Abarca PvP, misiones, un sistema de economía, casino y mucho más.",
-          "image": "",
+          "image": "assets/uploads/proyecto-ismanusmp-muqej3wsx8z.webp",
           "link": "https://discord.com/invite/8VpfVTF",
           "linkLabel": "Descubre como jugar aquí.",
           "hidden": false
