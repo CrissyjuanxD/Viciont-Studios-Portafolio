@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 23,
-    "updatedAt": "2026-10-02T04:01:56.591Z",
+    "version": 24,
+    "updatedAt": "2026-10-02T04:03:15.203Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -310,7 +310,7 @@
             "28 días"
           ],
           "description": "Un servidor hardcore que recreó la experiencia de Permadeath de ElRichMC, donde **40 jugadores** debían sobrevivir **28 días** para derrotar al Viciont Demon.\n\n8 jugadores sobrevivieron hasta el último día y al boss final.",
-          "image": "",
+          "image": "assets/uploads/proyecto-viciont-hardcore-2-muqfu0eb3tl.webp",
           "link": "https://discord.gg/qZPUhPRtX",
           "linkLabel": "Descubre mas del servidor.",
           "hidden": false
@@ -325,7 +325,7 @@
             "Mini eventos"
           ],
           "description": "El primer SMP del estudio bien hecho. Se caracterizó por tener pequeños cambios de dificultad, mini eventos, un sistema de pranks y, sobre todo, un bonito **resource pack** que hacía que el juego se viera más vivo y con muchos detalles.",
-          "image": "",
+          "image": "assets/uploads/proyecto-viciont-smp-2-muqfu0eb9h7.webp",
           "link": "https://discord.gg/qZPUhPRtX",
           "linkLabel": "Descubre mas del servidor.",
           "hidden": false
