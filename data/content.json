@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 25,
-    "updatedAt": "2026-10-02T04:07:54.530Z",
+    "version": 26,
+    "updatedAt": "2026-10-02T04:09:04.522Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -215,6 +215,19 @@
           "hidden": false
         },
         {
+          "id": "croissants-segunda-edicion",
+          "title": "Croissants Segunda Edicion",
+          "badge": "En desarrollo",
+          "tags": [
+            "SMP"
+          ],
+          "description": "Server SMP del Streamer Crosszy con muchas mas mejoras, dimensiones, bosses y mas de 100 misiones.\n\nEste server esta en desarrollo y sale en 10 de Octubre.",
+          "image": "",
+          "link": "https://discord.gg/AfgBWjFA",
+          "linkLabel": "Descubre mas en: \"La Chosa de Crosszy\"",
+          "hidden": false
+        },
+        {
           "id": "croissants",
           "title": "Croissants",
           "badge": "",
@@ -230,16 +243,18 @@
           "hidden": false
         },
         {
-          "id": "croissants-segunda-edicion",
-          "title": "Croissants Segunda Edicion",
-          "badge": "En desarrollo",
+          "id": "hunger-games",
+          "title": "Hunger Games",
+          "badge": "Finalizado",
           "tags": [
-            "SMP"
+            "Evento",
+            "+60 jugadores",
+            "PvP"
           ],
-          "description": "Server SMP del Streamer Crosszy con muchas mas mejoras, dimensiones, bosses y mas de 100 misiones.\n\nEste server esta en desarrollo y sale en 10 de Octubre.",
+          "description": "Un evento para el streamer IsManuPlay donde se jugaron unos Hunger Games de **más de 60 personas**. Debían lootear recursos por el mapa sin que el borde los matara y luchar entre todos; el último jugador vivo ganaba.",
           "image": "",
-          "link": "https://discord.gg/AfgBWjFA",
-          "linkLabel": "Descubre mas en: \"La Chosa de Crosszy\"",
+          "link": "https://www.youtube.com/live/pmDcWs4YvcQ?si=M45Zkz0oRfHnal8i&t=1",
+          "linkLabel": "Ver Evento",
           "hidden": false
         },
         {
@@ -253,21 +268,6 @@
           "description": "Un evento para el streamer IsManuPlay donde se jugó al famoso hide and seek: los jugadores debían esconderse con un tamaño reducido en un inmenso mapa con ítems custom y monedas, mientras los cazadores los buscaban. Ganaba quien tuviera más monedas.",
           "image": "",
           "link": "https://www.youtube.com/watch?v=rg-sytoOY8M&t=1s",
-          "linkLabel": "Ver Evento",
-          "hidden": false
-        },
-        {
-          "id": "hunger-games",
-          "title": "Hunger Games",
-          "badge": "Finalizado",
-          "tags": [
-            "Evento",
-            "+60 jugadores",
-            "PvP"
-          ],
-          "description": "Un evento para el streamer IsManuPlay donde se jugaron unos Hunger Games de **más de 60 personas**. Debían lootear recursos por el mapa sin que el borde los matara y luchar entre todos; el último jugador vivo ganaba.",
-          "image": "",
-          "link": "https://www.youtube.com/live/pmDcWs4YvcQ?si=M45Zkz0oRfHnal8i&t=1",
           "linkLabel": "Ver Evento",
           "hidden": false
         },
