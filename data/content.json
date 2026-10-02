@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 22,
-    "updatedAt": "2026-10-02T04:00:41.581Z",
+    "version": 23,
+    "updatedAt": "2026-10-02T04:01:56.591Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -285,6 +285,22 @@
           "hidden": false
         },
         {
+          "id": "nasheland-3",
+          "title": "Nasheland 3",
+          "badge": "Finalizado",
+          "tags": [
+            "Mods",
+            "SMP",
+            "Aventura",
+            "RPG"
+          ],
+          "description": "Este server se hizo en colaboración con MeelHD,.\nFue un server en la 1.16.5 con mas de 80 Mods por descubrir, tuvo una buena actividad en el server con mas de 30 personas jugando.\n\nFue el primer servidor de mods que se hace a nombre de viciont studios.",
+          "image": "assets/uploads/proyecto-nasheland-3-muqfqpv1bd5.webp",
+          "link": "https://discord.gg/8R6Ex4dfK",
+          "linkLabel": "Descubre mas",
+          "hidden": false
+        },
+        {
           "id": "viciont-hardcore-2",
           "title": "Viciont Hardcore 2",
           "badge": "Finalizado",
@@ -312,22 +328,6 @@
           "image": "",
           "link": "https://discord.gg/qZPUhPRtX",
           "linkLabel": "Descubre mas del servidor.",
-          "hidden": false
-        },
-        {
-          "id": "nasheland-3",
-          "title": "Nasheland 3",
-          "badge": "Finalizado",
-          "tags": [
-            "Mods",
-            "SMP",
-            "Aventura",
-            "RPG"
-          ],
-          "description": "Este server se hizo en colaboración con MeelHD,.\nFue un server en la 1.16.5 con mas de 80 Mods por descubrir, tuvo una buena actividad en el server con mas de 30 personas jugando.\n\nFue el primer servidor de mods que se hace a nombre de viciont studios.",
-          "image": "assets/uploads/proyecto-nasheland-3-muqfqpv1bd5.webp",
-          "link": "https://discord.gg/8R6Ex4dfK",
-          "linkLabel": "Descubre mas",
           "hidden": false
         }
       ]
