@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 17,
-    "updatedAt": "2026-10-02T03:26:46.924Z",
+    "version": 18,
+    "updatedAt": "2026-10-02T03:30:34.490Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -210,7 +210,7 @@
           ],
           "description": "Un OneBlock hardcore que se hizo con los streamers IsManuPlay y ElGeorge16, donde había **15 fases y 15 cambios de dificultad** que tenían que sobrevivir, con estructuras, bosses e ítems custom.\n\nAdemás, es el primer evento público de Viciont Studios con assets y mods privados.",
           "image": "",
-          "link": "https://www.youtube.com/watch?v=So32OS70Nt8&t=2802s",
+          "link": "https://www.youtube.com/live/So32OS70Nt8?t=0s",
           "linkLabel": "Ver Evento",
           "hidden": false
         },
@@ -239,7 +239,7 @@
           ],
           "description": "Un evento para el streamer IsManuPlay donde se jugó al famoso hide and seek: los jugadores debían esconderse con un tamaño reducido en un inmenso mapa con ítems custom y monedas, mientras los cazadores los buscaban. Ganaba quien tuviera más monedas.",
           "image": "",
-          "link": "https://www.youtube.com/watch?v=rg-sytoOY8M&t=3820s",
+          "link": "https://www.youtube.com/watch?v=rg-sytoOY8M&t=1s",
           "linkLabel": "Ver Evento",
           "hidden": false
         },
@@ -254,7 +254,7 @@
           ],
           "description": "Un evento para el streamer IsManuPlay donde se jugaron unos Hunger Games de **más de 60 personas**. Debían lootear recursos por el mapa sin que el borde los matara y luchar entre todos; el último jugador vivo ganaba.",
           "image": "",
-          "link": "https://www.youtube.com/watch?v=pmDcWs4YvcQ",
+          "link": "https://www.youtube.com/live/pmDcWs4YvcQ?si=M45Zkz0oRfHnal8i&t=1",
           "linkLabel": "Ver Evento",
           "hidden": false
         },
