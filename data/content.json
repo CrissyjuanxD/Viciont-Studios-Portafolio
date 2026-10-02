@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 26,
-    "updatedAt": "2026-10-02T04:09:04.522Z",
+    "version": 27,
+    "updatedAt": "2026-10-02T04:09:55.029Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -230,7 +230,7 @@
         {
           "id": "croissants",
           "title": "Croissants",
-          "badge": "",
+          "badge": "Finalizado",
           "tags": [
             "SMP",
             "Java + Bedrock",
