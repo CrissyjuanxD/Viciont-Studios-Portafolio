@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 19,
-    "updatedAt": "2026-10-02T03:37:05.905Z",
+    "version": 20,
+    "updatedAt": "2026-10-02T03:38:01.275Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -304,7 +304,7 @@
             "Permisos"
           ],
           "description": "Un plugin sencillo para la versión 1.21.1+ que sirve para que los jugadores puedan proteger zonas y otorgar permisos a otros jugadores. Se usó en el IsManuSMP de IsManuPlay y en Croissants de Crosszy.\n\nDale clic para ir al lugar de descarga del plugin y apoyar el proyecto.",
-          "image": "",
+          "image": "assets/uploads/plugin-viciont-protections-muqexk8qdej.webp",
           "link": "https://www.spigotmc.org/resources/viciont-protections.124614/",
           "linkLabel": "Descargar en SpigotMC",
           "hidden": false
