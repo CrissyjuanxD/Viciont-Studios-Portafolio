@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 24,
-    "updatedAt": "2026-10-02T04:03:15.203Z",
+    "version": 25,
+    "updatedAt": "2026-10-02T04:07:54.530Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -328,6 +328,19 @@
           "image": "assets/uploads/proyecto-viciont-smp-2-muqfu0eb9h7.webp",
           "link": "https://discord.gg/qZPUhPRtX",
           "linkLabel": "Descubre mas del servidor.",
+          "hidden": false
+        },
+        {
+          "id": "viciont-smp",
+          "title": "Viciont SMP",
+          "badge": "Finalizado",
+          "tags": [
+            "SMP"
+          ],
+          "description": "Este fue el primer servidor de Viciont Studios.\nPrincipalmente solo jugaron 20 personas a este servidor, era prácticamente vanilla con algún par de plugins.\nDuro aproximadamente 2 semanas ya que tenia problemas de rendimiento.\nPero eso no nos detuvo a seguir haciendo proyectos para una comunidad que ama el juego.",
+          "image": "assets/uploads/proyecto-viciont-smp-muqfzzxdubd.webp",
+          "link": "",
+          "linkLabel": "",
           "hidden": false
         }
       ]
