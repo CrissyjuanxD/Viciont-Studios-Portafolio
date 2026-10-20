@@ -395,7 +395,74 @@ function initLauncher() {
   const helps = $('#dl-helps');
   const mine = PLATFORM && helps.querySelector(`[data-os="${PLATFORM}"]`);
   if (mine) helps.prepend(mine);
-  btn.addEventListener('click', () => toast(os.toast, { type: 'success' }));
+  btn.addEventListener('click', (e) => {
+    if (os === PLATFORMS.win && plainClick(e)) { e.preventDefault(); winNotice(btn.href, os); return; }
+    toast(os.toast, { type: 'success' });
+  });
+  const winAlt = $('.dl-alt__item[data-os="win"]');
+  winAlt?.addEventListener('click', (e) => {
+    if (!plainClick(e)) return;
+    e.preventDefault();
+    winNotice(winAlt.href, PLATFORMS.win);
+  });
+}
+
+const plainClick = (e) => e.button === 0 && !e.ctrlKey && !e.metaKey && !e.shiftKey && !e.altKey;
+
+function winNotice(href, os) {
+  const repo = `https://github.com/${LAUNCHER_REPO}`;
+  const box = modal.open(`
+    <div class="dl-notice">
+      <p class="dl-notice__eyebrow">${icon('shield')} Antes de instalarlo</p>
+      <h2 class="dl-notice__title" id="modal-title">Windows te avisará al abrirlo</h2>
+      <p class="dl-notice__lead">Al abrir el instalador es muy probable que salga <b>«Windows protegió su PC»</b>. Es normal: para instalarlo solo tienes que hacer esto.</p>
+      <ol class="dl-steps">
+        <li class="dl-step">
+          <div class="smart" aria-hidden="true">
+            <p class="smart__title">Windows protegió su PC</p>
+            <p class="smart__text">SmartScreen de Microsoft Defender evitó que se iniciara una aplicación desconocida.</p>
+            <span class="smart__link is-hot">Más información</span>
+            <span class="smart__btns"><span class="smart__btn">No ejecutar</span></span>
+          </div>
+          <p class="dl-step__text"><b>1</b><span>Pulsa <strong>Más información</strong>.</span></p>
+        </li>
+        <li class="dl-step">
+          <div class="smart" aria-hidden="true">
+            <p class="smart__title">Windows protegió su PC</p>
+            <p class="smart__text">Aplicación: Viciont-Studios-Launcher-Setup.exe<br>Editor: Editor desconocido</p>
+            <span class="smart__btns"><span class="smart__btn is-hot">Ejecutar de todas formas</span><span class="smart__btn">No ejecutar</span></span>
+          </div>
+          <p class="dl-step__text"><b>2</b><span>Pulsa <strong>Ejecutar de todas formas</strong>.</span></p>
+        </li>
+      </ol>
+      <div class="dl-why">
+        <div>
+          <h3 class="dl-why__title">${icon('info')} ¿Por qué sale?</h3>
+          <p>Windows avisa de los programas que no tienen un certificado de pago de Microsoft y que todavía no ha descargado mucha gente. Cada versión nueva del launcher es un archivo que Windows aún no conoce, así que el aviso vuelve a salir aunque el programa no tenga nada malo.</p>
+        </div>
+        <div>
+          <h3 class="dl-why__title">${icon('shield')} ¿Por qué es seguro?</h3>
+          <ul>
+            <li>El código del launcher es público en GitHub: cualquiera puede revisar qué hace.</li>
+            <li>El instalador no se hace en el PC de nadie: lo crea GitHub automáticamente a partir de ese código, y lo descargas directamente desde GitHub.</li>
+            <li>El aviso solo sale al instalarlo: después, las actualizaciones se instalan solas.</li>
+          </ul>
+        </div>
+      </div>
+      <p class="dl-notice__links">
+        <a href="${repo}" target="_blank" rel="noopener noreferrer">${icon('github')} Ver el código en GitHub</a>
+        <a href="${repo}/actions" target="_blank" rel="noopener noreferrer">${icon('history')} Ver cómo se crea cada versión</a>
+      </p>
+      <p class="dl-notice__browser">Si el navegador también avisa al descargarlo: en <b>Chrome</b> pulsa <b>Conservar</b>; en <b>Edge</b>, pulsa <b>⌄</b> junto a <i>Eliminar</i> → <b>Conservar</b> → <b>Mostrar más</b> → <b>Conservar de todas formas</b>.</p>
+      <div class="modal__actions">
+        <button class="btn btn--ghost" type="button" data-close>Cancelar</button>
+        <a class="btn btn--primary" href="${escapeHtml(href)}" rel="noopener" data-dl-go>${icon('download')} Entendido, descargar para Windows</a>
+      </div>
+    </div>`, { size: 'lg' });
+  box.querySelector('[data-dl-go]').addEventListener('click', () => {
+    setTimeout(() => modal.close(), 60);
+    toast(os.toast, { type: 'success' });
+  });
 }
 
 const fmtSize = (n) => (n > 0 ? `${(n / 1048576).toFixed(n > 104857600 ? 0 : 1)} MB` : '');
