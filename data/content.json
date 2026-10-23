@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 28,
-    "updatedAt": "2026-10-23T01:31:02.720Z",
+    "version": 29,
+    "updatedAt": "2026-10-23T01:34:50.641Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -184,6 +184,19 @@
           "hidden": false
         },
         {
+          "id": "croissants-segunda-edicion",
+          "title": "Croissants Segunda Edicion",
+          "badge": "Activo",
+          "tags": [
+            "SMP"
+          ],
+          "description": "Este es un **SMP** del streamer **Crosszy** con **+100 misiones**, bosses custom, objetos únicos y eventos.\nPero no todo será desafío: el servidor también cuenta con un lado más tranquilo, \ndonde podrás construir, explorar y crear tu **propia aventura**.\nMas informacion, anuncios y guias del server lo encontraras en esta web: https://croissants.pages.dev/",
+          "image": "assets/uploads/proyecto-croissants-segunda-edicion-mvkan5q8h7w.webp",
+          "link": "https://croissants.pages.dev/",
+          "linkLabel": "Todo sobre el servidor",
+          "hidden": false
+        },
+        {
           "id": "ismanusmp",
           "title": "IsManuSMP",
           "badge": "Activo",
@@ -212,19 +225,6 @@
           "image": "assets/uploads/proyecto-oneblock-with-manu-and-george-muqewdiocwe.webp",
           "link": "https://www.youtube.com/live/So32OS70Nt8?t=0s",
           "linkLabel": "Ver Evento",
-          "hidden": false
-        },
-        {
-          "id": "croissants-segunda-edicion",
-          "title": "Croissants Segunda Edicion",
-          "badge": "Activo",
-          "tags": [
-            "SMP"
-          ],
-          "description": "Este es un **SMP** del streamer **Crosszy** con **+100 misiones**, bosses custom, objetos únicos y eventos.\nPero no todo será desafío: el servidor también cuenta con un lado más tranquilo, \ndonde podrás construir, explorar y crear tu **propia aventura**.\nMas informacion, anuncios y guias del server lo encontraras en esta web: https://croissants.pages.dev/",
-          "image": "assets/uploads/proyecto-croissants-segunda-edicion-mvkan5q8h7w.webp",
-          "link": "https://croissants.pages.dev/",
-          "linkLabel": "Todo sobre el servidor",
           "hidden": false
         },
         {
