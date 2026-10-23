@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 27,
-    "updatedAt": "2026-10-02T04:09:55.029Z",
+    "version": 28,
+    "updatedAt": "2026-10-23T01:31:02.720Z",
     "updatedBy": "CrissyjuanxD"
   },
   "site": {
@@ -217,14 +217,14 @@
         {
           "id": "croissants-segunda-edicion",
           "title": "Croissants Segunda Edicion",
-          "badge": "En desarrollo",
+          "badge": "Activo",
           "tags": [
             "SMP"
           ],
-          "description": "Server SMP del Streamer Crosszy con muchas mas mejoras, dimensiones, bosses y mas de 100 misiones.\n\nEste server esta en desarrollo y sale en 10 de Octubre.",
-          "image": "",
-          "link": "https://discord.gg/AfgBWjFA",
-          "linkLabel": "Descubre mas en: \"La Chosa de Crosszy\"",
+          "description": "Este es un **SMP** del streamer **Crosszy** con **+100 misiones**, bosses custom, objetos únicos y eventos.\nPero no todo será desafío: el servidor también cuenta con un lado más tranquilo, \ndonde podrás construir, explorar y crear tu **propia aventura**.\nMas informacion, anuncios y guias del server lo encontraras en esta web: https://croissants.pages.dev/",
+          "image": "assets/uploads/proyecto-croissants-segunda-edicion-mvkan5q8h7w.webp",
+          "link": "https://croissants.pages.dev/",
+          "linkLabel": "Todo sobre el servidor",
           "hidden": false
         },
         {
